@@ -6,101 +6,97 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface DemoCard {
-        "cardTitle": string;
-        "subtitle": string;
+    interface TcBenefitsSection {
+        "benefits": { iconPath: string, title: string, description: string }[];
     }
-    interface DemoSection {
+    interface TcJobCard {
+        "altText": string;
+        "detailedDescription": string;
+        "header": string;
+        "imagePosition": 'left' | 'right';
+        "imageSrc": string;
+        "shortDescription": string;
     }
-    interface FooterNav {
+    interface TcTestimonial {
+        "altText": string;
+        "description": string;
+        "imageSrc": string;
+        "name": string;
+        "quote": string;
     }
-    interface HeroSection {
-    }
-    interface MainApp {
-    }
-    interface TopNavBar {
+    interface TcTitle {
+        "text": string;
     }
 }
 declare global {
-    interface HTMLDemoCardElement extends Components.DemoCard, HTMLStencilElement {
+    interface HTMLTcBenefitsSectionElement extends Components.TcBenefitsSection, HTMLStencilElement {
     }
-    var HTMLDemoCardElement: {
-        prototype: HTMLDemoCardElement;
-        new (): HTMLDemoCardElement;
+    var HTMLTcBenefitsSectionElement: {
+        prototype: HTMLTcBenefitsSectionElement;
+        new (): HTMLTcBenefitsSectionElement;
     };
-    interface HTMLDemoSectionElement extends Components.DemoSection, HTMLStencilElement {
+    interface HTMLTcJobCardElement extends Components.TcJobCard, HTMLStencilElement {
     }
-    var HTMLDemoSectionElement: {
-        prototype: HTMLDemoSectionElement;
-        new (): HTMLDemoSectionElement;
+    var HTMLTcJobCardElement: {
+        prototype: HTMLTcJobCardElement;
+        new (): HTMLTcJobCardElement;
     };
-    interface HTMLFooterNavElement extends Components.FooterNav, HTMLStencilElement {
+    interface HTMLTcTestimonialElement extends Components.TcTestimonial, HTMLStencilElement {
     }
-    var HTMLFooterNavElement: {
-        prototype: HTMLFooterNavElement;
-        new (): HTMLFooterNavElement;
+    var HTMLTcTestimonialElement: {
+        prototype: HTMLTcTestimonialElement;
+        new (): HTMLTcTestimonialElement;
     };
-    interface HTMLHeroSectionElement extends Components.HeroSection, HTMLStencilElement {
+    interface HTMLTcTitleElement extends Components.TcTitle, HTMLStencilElement {
     }
-    var HTMLHeroSectionElement: {
-        prototype: HTMLHeroSectionElement;
-        new (): HTMLHeroSectionElement;
-    };
-    interface HTMLMainAppElement extends Components.MainApp, HTMLStencilElement {
-    }
-    var HTMLMainAppElement: {
-        prototype: HTMLMainAppElement;
-        new (): HTMLMainAppElement;
-    };
-    interface HTMLTopNavBarElement extends Components.TopNavBar, HTMLStencilElement {
-    }
-    var HTMLTopNavBarElement: {
-        prototype: HTMLTopNavBarElement;
-        new (): HTMLTopNavBarElement;
+    var HTMLTcTitleElement: {
+        prototype: HTMLTcTitleElement;
+        new (): HTMLTcTitleElement;
     };
     interface HTMLElementTagNameMap {
-        "demo-card": HTMLDemoCardElement;
-        "demo-section": HTMLDemoSectionElement;
-        "footer-nav": HTMLFooterNavElement;
-        "hero-section": HTMLHeroSectionElement;
-        "main-app": HTMLMainAppElement;
-        "top-nav-bar": HTMLTopNavBarElement;
+        "tc-benefits-section": HTMLTcBenefitsSectionElement;
+        "tc-job-card": HTMLTcJobCardElement;
+        "tc-testimonial": HTMLTcTestimonialElement;
+        "tc-title": HTMLTcTitleElement;
     }
 }
 declare namespace LocalJSX {
-    interface DemoCard {
-        "cardTitle"?: string;
-        "subtitle"?: string;
+    interface TcBenefitsSection {
+        "benefits"?: { iconPath: string, title: string, description: string }[];
     }
-    interface DemoSection {
+    interface TcJobCard {
+        "altText"?: string;
+        "detailedDescription"?: string;
+        "header"?: string;
+        "imagePosition"?: 'left' | 'right';
+        "imageSrc"?: string;
+        "shortDescription"?: string;
     }
-    interface FooterNav {
+    interface TcTestimonial {
+        "altText"?: string;
+        "description"?: string;
+        "imageSrc"?: string;
+        "name"?: string;
+        "quote"?: string;
     }
-    interface HeroSection {
-    }
-    interface MainApp {
-    }
-    interface TopNavBar {
+    interface TcTitle {
+        "text"?: string;
     }
     interface IntrinsicElements {
-        "demo-card": DemoCard;
-        "demo-section": DemoSection;
-        "footer-nav": FooterNav;
-        "hero-section": HeroSection;
-        "main-app": MainApp;
-        "top-nav-bar": TopNavBar;
+        "tc-benefits-section": TcBenefitsSection;
+        "tc-job-card": TcJobCard;
+        "tc-testimonial": TcTestimonial;
+        "tc-title": TcTitle;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "demo-card": LocalJSX.DemoCard & JSXBase.HTMLAttributes<HTMLDemoCardElement>;
-            "demo-section": LocalJSX.DemoSection & JSXBase.HTMLAttributes<HTMLDemoSectionElement>;
-            "footer-nav": LocalJSX.FooterNav & JSXBase.HTMLAttributes<HTMLFooterNavElement>;
-            "hero-section": LocalJSX.HeroSection & JSXBase.HTMLAttributes<HTMLHeroSectionElement>;
-            "main-app": LocalJSX.MainApp & JSXBase.HTMLAttributes<HTMLMainAppElement>;
-            "top-nav-bar": LocalJSX.TopNavBar & JSXBase.HTMLAttributes<HTMLTopNavBarElement>;
+            "tc-benefits-section": LocalJSX.TcBenefitsSection & JSXBase.HTMLAttributes<HTMLTcBenefitsSectionElement>;
+            "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
+            "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
+            "tc-title": LocalJSX.TcTitle & JSXBase.HTMLAttributes<HTMLTcTitleElement>;
         }
     }
 }
