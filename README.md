@@ -28,8 +28,10 @@ npm start
 ├── component A                
 │   ├── component A.tsx        
 │   ├── component A.css                         
-└── component B
+├── component B
+   
 ├── index.html
+
 ├── package.json
 
 
