@@ -37,9 +37,10 @@ To add new components make a new component folder in the component folder.
 Checkout more on Stencil components [here](https://stenciljs.com/docs/component).
 In that folder have a tsx file and css file.
 
-Example tsx of title
 
+#### Component tsx
 ```
+/// components/tc-example-title/tc-example-title.tsx
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
@@ -61,6 +62,51 @@ export class TcExampleHeading {
 
 ```
 
+
+#### Styling sheet
+Since we are using tailwind we do the styling in the the component sheet directly. 
+However so that our component is displayed, it is necessary to add this into the styling sheet.
+
+```
+/// components/tc-example-title/tc-example-title.css
+:host {
+  display: block;
+  }
+```
+
+#### index.html
+
+When running
+
+```shell
+npm start
+```
+Our index.html file is displayed.
+So when testing you can simply add your components into the body part of the index.html file.
+
+```
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil & Tailwind Example UI</title>
+
+    <script type="module" src="./build/stencil-component-example.esm.js"></script>
+    <script nomodule src="./build/stencil-component-example.js"></script>
+  </head>
+  <body>
+// here you see the component added below
+<tc-example-title  text ="Offene Stellen"> </tc-example-title>
+
+  </body>
+</html>
+
+```
+
+#### pckg.json
+Todo
 
 
 ## Publishing
