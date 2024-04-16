@@ -7,7 +7,6 @@ import autoprefixer from 'autoprefixer';
 
 setPluginConfigurationDefaults({
   tailwindConf,
-  tailwindCssPath: './src/styles/tailwind.css',
   postcss: {
     plugins: [
       tailwindcss(),
