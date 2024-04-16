@@ -7,27 +7,28 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true
 })
 export class TcJobCard {
-  @Prop() header: string;
+  @Prop() imageSrc: string;
+  @Prop() jobTitle: string;
   @Prop() shortDescription: string;
   @Prop() detailedDescription: string;
-  @Prop() imageSrc: string;
-  @Prop() altText: string = "Picture";
-  @Prop() imagePosition: 'left' | 'right' = 'left'; // Default to left
-
+  
   render() {
-    const imageClass = this.imagePosition === 'left' ? "order-1" : "order-2";
-    const contentClass = this.imagePosition === 'left' ? "order-2" : "order-1";
-
     return (
-      <div class={`flex flex-col md:flex-row items-center gap-8`}>
-        <div class={`w-full md:flex-1 md:${imageClass}`}>
-          <img class="object-cover h-auto max-w-xs" src={this.imageSrc} alt={this.altText}/>
-        </div>
-        <div class={`flex-1 md:${contentClass}`}>
-          <h4 class="text-3xl font-bold">{this.header}</h4>
-          <p class="text-xl">{this.shortDescription}</p>
+      <div class="job-card-container m-auto max-w-[90rem] p-4">
+      <div class="job-card-header">
+      </div>
+      <div class="job-card-content flex flex-col gap-16 md:gap-24">
+        <div class="flex flex-col md:flex-row">
+        <div class="job-card-text flex-1">
+          <h4 class="text-3xl font-normal mb-2">{this.jobTitle}</h4>
+          <p class="text-xl mb-1">{this.shortDescription}</p>
           <p>{this.detailedDescription}</p>
         </div>
+        <div class="job-card-image relative flex-1">
+          <img src={this.imageSrc} alt={this.jobTitle} class="w-full object-scale-down max-h-[60%]" />
+        </div>
+        </div>
+      </div>
       </div>
     );
   }

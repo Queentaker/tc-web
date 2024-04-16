@@ -1,6 +1,4 @@
 :host {
-  --font-thesans-bold: 'TheSans-Bold', sans-serif;
-
-  font-family: var(--font-thesans-bold);
+  display: block;
 }
   

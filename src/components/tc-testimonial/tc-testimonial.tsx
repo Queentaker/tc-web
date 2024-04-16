@@ -10,10 +10,10 @@ export class MyTestimonial {
   @Prop() imageSrc: string;
   @Prop() quote: string;
   @Prop() name: string;
-  @Prop() title: string;
   @Prop() imageOnLeft: boolean = false; // New property to control image position
   @Prop() altText: string = 'Picture';
   @Prop() role: string;
+  @Prop() pro: string;
   
   render() {
     const imageSection = (
@@ -27,7 +27,7 @@ export class MyTestimonial {
   
     const textSection = (
       <div class={{ 'flex-1': true, 'order-2 md:order-2': this.imageOnLeft, 'order-1 md:order-1': !this.imageOnLeft, 'px-4': true }}>
-        <h3 class="text-2xl font-bold">{this.title}</h3>
+        <h3 class="text-2xl font-bold">{this.pro}</h3>
         <blockquote class="mt-4 mb-4 text-lg rounded-xl bg-gray-100 p-4">
           {quoteMarkOpen}
           <p class="inline">{this.quote}</p>

@@ -10,11 +10,9 @@ export namespace Components {
         "benefits": { iconPath: string, title: string, description: string }[];
     }
     interface TcJobCard {
-        "altText": string;
         "detailedDescription": string;
-        "header": string;
-        "imagePosition": 'left' | 'right';
         "imageSrc": string;
+        "jobTitle": string;
         "shortDescription": string;
     }
     interface TcTestimonial {
@@ -22,9 +20,9 @@ export namespace Components {
         "imageOnLeft": boolean;
         "imageSrc": string;
         "name": string;
+        "pro": string;
         "quote": string;
         "role": string;
-        "title": string;
     }
     interface TcTitle {
         "text": string;
@@ -67,11 +65,9 @@ declare namespace LocalJSX {
         "benefits"?: { iconPath: string, title: string, description: string }[];
     }
     interface TcJobCard {
-        "altText"?: string;
         "detailedDescription"?: string;
-        "header"?: string;
-        "imagePosition"?: 'left' | 'right';
         "imageSrc"?: string;
+        "jobTitle"?: string;
         "shortDescription"?: string;
     }
     interface TcTestimonial {
@@ -79,9 +75,9 @@ declare namespace LocalJSX {
         "imageOnLeft"?: boolean;
         "imageSrc"?: string;
         "name"?: string;
+        "pro"?: string;
         "quote"?: string;
         "role"?: string;
-        "title"?: string;
     }
     interface TcTitle {
         "text"?: string;
