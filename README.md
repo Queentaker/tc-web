@@ -110,7 +110,7 @@ So when testing you can simply add your components into the body part of the ind
 ![result](https://github.com/Queentaker/tc_web/assets/93202854/fd07a9cf-e9df-471a-838a-ff7d08fd8d1b)
 
 
-#### pckg.json
+#### packege.json
 
 The package.json file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.
 
