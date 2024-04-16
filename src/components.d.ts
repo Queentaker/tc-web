@@ -6,97 +6,34 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface TcBenefitsSection {
-        "benefits": { iconPath: string, title: string, description: string }[];
-    }
-    interface TcJobCard {
-        "altText": string;
-        "detailedDescription": string;
-        "header": string;
-        "imagePosition": 'left' | 'right';
-        "imageSrc": string;
-        "shortDescription": string;
-    }
-    interface TcTestimonial {
-        "altText": string;
-        "description": string;
-        "imageSrc": string;
-        "name": string;
-        "quote": string;
-    }
-    interface TcTitle {
+    interface TcExampleTitle {
         "text": string;
     }
 }
 declare global {
-    interface HTMLTcBenefitsSectionElement extends Components.TcBenefitsSection, HTMLStencilElement {
+    interface HTMLTcExampleTitleElement extends Components.TcExampleTitle, HTMLStencilElement {
     }
-    var HTMLTcBenefitsSectionElement: {
-        prototype: HTMLTcBenefitsSectionElement;
-        new (): HTMLTcBenefitsSectionElement;
-    };
-    interface HTMLTcJobCardElement extends Components.TcJobCard, HTMLStencilElement {
-    }
-    var HTMLTcJobCardElement: {
-        prototype: HTMLTcJobCardElement;
-        new (): HTMLTcJobCardElement;
-    };
-    interface HTMLTcTestimonialElement extends Components.TcTestimonial, HTMLStencilElement {
-    }
-    var HTMLTcTestimonialElement: {
-        prototype: HTMLTcTestimonialElement;
-        new (): HTMLTcTestimonialElement;
-    };
-    interface HTMLTcTitleElement extends Components.TcTitle, HTMLStencilElement {
-    }
-    var HTMLTcTitleElement: {
-        prototype: HTMLTcTitleElement;
-        new (): HTMLTcTitleElement;
+    var HTMLTcExampleTitleElement: {
+        prototype: HTMLTcExampleTitleElement;
+        new (): HTMLTcExampleTitleElement;
     };
     interface HTMLElementTagNameMap {
-        "tc-benefits-section": HTMLTcBenefitsSectionElement;
-        "tc-job-card": HTMLTcJobCardElement;
-        "tc-testimonial": HTMLTcTestimonialElement;
-        "tc-title": HTMLTcTitleElement;
+        "tc-example-title": HTMLTcExampleTitleElement;
     }
 }
 declare namespace LocalJSX {
-    interface TcBenefitsSection {
-        "benefits"?: { iconPath: string, title: string, description: string }[];
-    }
-    interface TcJobCard {
-        "altText"?: string;
-        "detailedDescription"?: string;
-        "header"?: string;
-        "imagePosition"?: 'left' | 'right';
-        "imageSrc"?: string;
-        "shortDescription"?: string;
-    }
-    interface TcTestimonial {
-        "altText"?: string;
-        "description"?: string;
-        "imageSrc"?: string;
-        "name"?: string;
-        "quote"?: string;
-    }
-    interface TcTitle {
+    interface TcExampleTitle {
         "text"?: string;
     }
     interface IntrinsicElements {
-        "tc-benefits-section": TcBenefitsSection;
-        "tc-job-card": TcJobCard;
-        "tc-testimonial": TcTestimonial;
-        "tc-title": TcTitle;
+        "tc-example-title": TcExampleTitle;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "tc-benefits-section": LocalJSX.TcBenefitsSection & JSXBase.HTMLAttributes<HTMLTcBenefitsSectionElement>;
-            "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
-            "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
-            "tc-title": LocalJSX.TcTitle & JSXBase.HTMLAttributes<HTMLTcTitleElement>;
+            "tc-example-title": LocalJSX.TcExampleTitle & JSXBase.HTMLAttributes<HTMLTcExampleTitleElement>;
         }
     }
 }

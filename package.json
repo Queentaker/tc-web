@@ -1,6 +1,6 @@
 {
-  "name": "tc-web",
-  "version": "0.0.2",
+  "name": "your-package-name",
+  "version": "0.0.1",
   "description": "Stencil components for TC website",
   "main": "dist/index.cjs.js",
   "module": "./dist/index.js",
