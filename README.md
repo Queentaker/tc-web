@@ -84,7 +84,7 @@ When running
 npm start
 ```
 Our index.html file is displayed.
-So when testing you can simply add your components into the body part of the index.html file.
+So when testing you can simply add your components into the body part of the index.html file. To then see them on localhost:3333.
 
 ```
 
@@ -107,8 +107,16 @@ So when testing you can simply add your components into the body part of the ind
 
 ```
 
+![result](https://github.com/Queentaker/tc_web/assets/93202854/fd07a9cf-e9df-471a-838a-ff7d08fd8d1b)
+
+
 #### pckg.json
-Todo
+
+The package.json file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.
+
+What do you need to change:
+- the "name" of the pckg under this name it will be published
+- when you want to make changes to your pckg you need to create a new version
 
 
 ## Publishing
