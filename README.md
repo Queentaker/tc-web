@@ -25,10 +25,10 @@ npm start
 
 ├── src   
 ├── components   
-├── component A                
-│   ├── component A.tsx        
-│   ├── component A.css                         
-├── component B
+├──   ├── component A                
+  │   ├── ├── component A.tsx        
+  │   ├── ├── component A.css                         
+  ├── ├── component B
    
 ├── index.html
 
