@@ -19,10 +19,12 @@ export namespace Components {
     }
     interface TcTestimonial {
         "altText": string;
-        "description": string;
+        "imageOnLeft": boolean;
         "imageSrc": string;
         "name": string;
         "quote": string;
+        "role": string;
+        "title": string;
     }
     interface TcTitle {
         "text": string;
@@ -74,10 +76,12 @@ declare namespace LocalJSX {
     }
     interface TcTestimonial {
         "altText"?: string;
-        "description"?: string;
+        "imageOnLeft"?: boolean;
         "imageSrc"?: string;
         "name"?: string;
         "quote"?: string;
+        "role"?: string;
+        "title"?: string;
     }
     interface TcTitle {
         "text"?: string;

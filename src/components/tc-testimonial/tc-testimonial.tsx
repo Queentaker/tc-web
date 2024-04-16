@@ -1,35 +1,50 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'tc-testimonial',
-  styleUrl: 'tc-testimonial.css', 
+  styleUrl: 'tc-testimonial.css',
   shadow: true
 })
 export class MyTestimonial {
+
   @Prop() imageSrc: string;
-  @Prop() altText: string = "Picture";
   @Prop() quote: string;
   @Prop() name: string;
-  @Prop() description: string;
-
+  @Prop() title: string;
+  @Prop() imageOnLeft: boolean = false; // New property to control image position
+  @Prop() altText: string = 'Picture';
+  @Prop() role: string;
+  
   render() {
-    return (
-      <div class="flex items-center justify-between bg-white p-5 shadow-md rounded-lg font-sans">
-        <div class="flex items-center space-x-4">
-          <div class="max-w-60%">
-            <blockquote class="pl-5 m-0 text-xl leading-relaxed relative before:content-['“'] before:text-4xl before:absolute before:left-[-10px] before:top-[-20px] before:text-gray-300">
-              {this.quote}
-            </blockquote>
-            <div class="mt-2.5">
-              <p>{this.name}</p>
-              <p class="text-sm text-gray-500">{this.description}</p>
-            </div>
-          </div>
-          <div class="max-w-[200px]">
-            <img class="rounded-lg" src={this.imageSrc} alt={this.altText} />
-          </div>
-        </div>
+    const imageSection = (
+      <div class={{ 'order-1 md:order-1': this.imageOnLeft, 'order-2 md:order-2': !this.imageOnLeft, 'w-full md:w-[330px]': true, 'px-4': true }}>
+        <img alt={this.altText} src={this.imageSrc} class="rounded-xl object-cover w-full" />
       </div>
     );
+  
+    const quoteMarkOpen = <span class="text-4xl text-gray-400">“</span>;
+    const quoteMarkClose = <span class="text-4xl text-gray-400 leading-none">”</span>;
+  
+    const textSection = (
+      <div class={{ 'flex-1': true, 'order-2 md:order-2': this.imageOnLeft, 'order-1 md:order-1': !this.imageOnLeft, 'px-4': true }}>
+        <h3 class="text-2xl font-bold">{this.title}</h3>
+        <blockquote class="mt-4 mb-4 text-lg rounded-xl bg-gray-100 p-4">
+          {quoteMarkOpen}
+          <p class="inline">{this.quote}</p>
+          {quoteMarkClose}
+        </blockquote>
+        <p class="text-md">{this.name}, {this.role}</p>
+      </div>
+    );
+  
+    return (
+      <div class={{ 'flex': true, 'flex-col': true, 'items-center': true, 'w-full': true, 'gap-8': true, 'px-4': true, 'py-2': true, 'md:flex-row': true }}>
+        {this.imageOnLeft ? imageSection : textSection}
+        {this.imageOnLeft ? textSection : imageSection}
+        <p> </p>
+      </div>
+      
+    );
   }
+  
 }
