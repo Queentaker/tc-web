@@ -1,9 +1,6 @@
 # segment-container
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +9,6 @@
 | `backgroundColor` | `background-color` |             | `string` | `undefined` |
 | `segTitle`        | `seg-title`        |             | `string` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

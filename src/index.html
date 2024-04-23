@@ -1,79 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
     <title>Stencil & Tailwind Example UI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
- rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <script type="module" src="./build/stencil-component-example.esm.js"></script>
+    <script
+      type="module"
+      src="./build/stencil-component-example.esm.js"
+    ></script>
     <script nomodule src="./build/stencil-component-example.js"></script>
   </head>
   <body>
-<tc-title  text ="Offene Stellen"> </tc-title>
-<tc-testimonial image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmanuel.fcfcf50d.jpg&w=1920&q=75"
- quote="I loved being able to work everywehre" name="Lewis Hamilton" pro="Freedom" role = "Racer good at right code quickly"
- image-on-left="true"></tc-testimonial>
+    <tc-title text="Offene Stellen"> </tc-title>
+    <tc-testimonial
+      image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmanuel.fcfcf50d.jpg&w=1920&q=75"
+      quote="I loved being able to work everywehre"
+      name="Lewis Hamilton"
+      pro="Freedom"
+      role="Racer good at right code quickly"
+      image-on-left="true"
+    ></tc-testimonial>
 
- <tc-testimonial image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpascal.cd3140df.jpg&w=1920&q=75"
- quote="I loved being able to work everywehre" name="Lewis Hamilton" pro="Freedom" role = "Racer good at right code quickly"
- image-on-left="false"></tc-testimonial>
+    <tc-testimonial
+      image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpascal.cd3140df.jpg&w=1920&q=75"
+      quote="I loved being able to work everywehre"
+      name="Lewis Hamilton"
+      pro="Freedom"
+      role="Racer good at right code quickly"
+      image-on-left="false"
+    ></tc-testimonial>
 
+    <segment-container id="jobs" seg-title="Jobs" background-color="#ffffff">
+      <tc-job-card
+        image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
+        job-title="Junior IT"
+        short-description="IT-Fachkraft für technische Unterstützung und Umsetzung von neuen Inhalten"
+        detailed-description="Diese Position ist für Studierende, welche ca. im 3. Semester Informatik..."
+      ></tc-job-card>
 
-
-
-<segment-container id="jobs" seg-title="Jobs" background-color="#ffffff">
-<tc-job-card 
-image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
-  job-title="Junior IT"
-  short-description="IT-Fachkraft für technische Unterstützung und Umsetzung von neuen Inhalten"
-  detailed-description="Diese Position ist für Studierende, welche ca. im 3. Semester Informatik..."
-
-></tc-job-card>
-
-<tc-job-card 
-image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
-  job-title="Senior IT"
-  short-description="Entwicklung von Geschäftsapplikationen, WebApps, Games und weiterer Projekte"
-  detailed-description="Diese Position ist für Studierende ab dem 5. Semester Informatik im Haupt- oder Nebenfach, welche bereits Programmiererfahrung haben, bevorzugterweise mit React. Hier arbeitet man in IT-Projekten mit, bei welchen WebApps, Games oder andere Produkte implementiert werden und hilft bei Erweiterungen und Modernisierung bestehender Applikationen sowie bei der Konzeptionierung neuer Ideen.
+      <tc-job-card
+        image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
+        job-title="Senior IT"
+        short-description="Entwicklung von Geschäftsapplikationen, WebApps, Games und weiterer Projekte"
+        detailed-description="Diese Position ist für Studierende ab dem 5. Semester Informatik im Haupt- oder Nebenfach, welche bereits Programmiererfahrung haben, bevorzugterweise mit React. Hier arbeitet man in IT-Projekten mit, bei welchen WebApps, Games oder andere Produkte implementiert werden und hilft bei Erweiterungen und Modernisierung bestehender Applikationen sowie bei der Konzeptionierung neuer Ideen.
 
   Bei einer Bewerbung für diese Position wirst du von uns eine kleine React Programmier-Challenge erhalten, mit der du deine Fähigkeiten beweisen kannst. Das erlaubt uns, beim Interview auf nicht aussagekräftige technische Fragen (“Whiteboard-Coding”) zu verzichten :)"
+      ></tc-job-card>
+    </segment-container>
 
-></tc-job-card>
+    <segment-container
+      id="technologies"
+      seg-title="Mehr Informationen über uns? Unsere Lieblingstechnologien und Frameworks"
+      background-color="#ffffff"
+    >
+      <tc-grid-container>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+          tech-title="React"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+          tech-title="NodeJS"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+          tech-title="React"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+          tech-title="NodeJS"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+          tech-title="React"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+          tech-title="NodeJS"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+          tech-title="React"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+          tech-title="NodeJS"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+          tech-title="React"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+          tech-title="NodeJS"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+          tech-title="React"
+        ></tc-framework-item>
+        <tc-framework-item
+          image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+          tech-title="NodeJS"
+        ></tc-framework-item>
+      </tc-grid-container>
+    </segment-container>
 
-</segment-container>
-
-
-
-
-<segment-container id="technologies" seg-title="Mehr Informationen über uns? Unsere Lieblingstechnologien und Frameworks" background-color="#ffffff">
-  <tc-grid-container>
-    <tc-framework-item image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" tech-title="React"></tc-framework-item>
-    <tc-framework-item image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" tech-title="NodeJS"></tc-framework-item>
-    <tc-framework-item image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" tech-title="React"></tc-framework-item>
-    <tc-framework-item image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" tech-title="NodeJS"></tc-framework-item>
-    <tc-framework-item image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" tech-title="React"></tc-framework-item>
-    <tc-framework-item image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" tech-title="NodeJS"></tc-framework-item>
- 
-  </tc-grid-container>
-</segment-container>
-
-<segment-container id="technologies" seg-title="Was wir dir bieten" background-color="#ffffff">
-  <tc-k-container>
-    <tc-advantage-column icon-name ="code branch" iconColor="#191919">
-
-    </tc-advantage-column>
-  </tc-k-container>
-
-
-
-</segment-container>
-<tc-title  text ="Offene Stellen"> </tc-title>
-
-
-
-</body>
+    <segment-container
+      id="technologies"
+      seg-title="Was wir dir bieten"
+      background-color="#ffffff"
+    >
+      <tc-k-container>
+        <tc-advantage-column icon-name="code branch" iconColor="#191919">
+        </tc-advantage-column>
+      </tc-k-container>
+    </segment-container>
+    <tc-title text="Offene Stellen"> </tc-title>
+  </body>
 </html>

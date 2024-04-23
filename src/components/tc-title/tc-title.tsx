@@ -1,12 +1,12 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: 'tc-title',
-  styleUrl: 'tc-title.css',
-  shadow: true
+  tag: "tc-title",
+  styleUrl: "tc-title.css",
+  shadow: true,
 })
 export class TcHeading {
-  @Prop() text: string; 
+  @Prop() text: string;
 
   render() {
     return (

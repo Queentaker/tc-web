@@ -1,9 +1,6 @@
 # tc-job-card
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,7 +11,6 @@
 | `jobTitle`            | `job-title`            |             | `string` | `undefined` |
 | `shortDescription`    | `short-description`    |             | `string` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

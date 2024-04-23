@@ -1,9 +1,9 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: 'tc-framework-item',
-  styleUrl: 'tc-framework-item.css',
-  shadow: true
+  tag: "tc-framework-item",
+  styleUrl: "tc-framework-item.css",
+  shadow: true,
 })
 export class FrameworkItem {
   @Prop() image: string;
@@ -12,9 +12,13 @@ export class FrameworkItem {
   render() {
     return (
       <div class="flex flex-col items-center">
-        <div class="relative w-16 h-16"> 
+        <div class="relative w-16 h-16">
           <div class="w-full pb-[100%] relative">
-            <img src={this.image} alt={this.techTitle} class="absolute w-full h-full object-contain" />
+            <img
+              src={this.image}
+              alt={this.techTitle}
+              class="absolute w-full h-full object-contain"
+            />
           </div>
         </div>
         <p class="mt-2 text-lg text-center">{this.techTitle}</p>

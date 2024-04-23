@@ -1,9 +1,6 @@
 # tc-framework-item
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +9,6 @@
 | `image`     | `image`      |             | `string` | `undefined` |
 | `techTitle` | `tech-title` |             | `string` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
