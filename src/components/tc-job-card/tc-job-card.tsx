@@ -20,11 +20,11 @@ export class TcJobCard {
       <div class="job-card-content flex flex-col gap-16 md:gap-24">
         <div class="flex flex-col md:flex-row">
         <div class="job-card-text flex-1">
-          <h4 class="text-3xl font-normal mb-2">{this.jobTitle}</h4>
-          <p class="text-xl mb-1">{this.shortDescription}</p>
-          <p>{this.detailedDescription}</p>
+          <h4 class="text-3xl font-normal mb-2 font-sans">{this.jobTitle}</h4>
+          <p class="text-xl mb-1 font-sans">{this.shortDescription}</p>
+          <p class="font-sans">{this.detailedDescription}</p>
         </div>
-        <div class="job-card-image relative flex-1">
+        <div class="job-card-image relative flex-1 font-sans">
           <img src={this.imageSrc} alt={this.jobTitle} class="w-full object-scale-down max-h-[60%]" />
         </div>
         </div>

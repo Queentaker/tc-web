@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         
-        sans: ['Source Sans 3','Source Sans Pro', ...defaultTheme.fontFamily.sans], // source sans 3 == Source Sans Pro // add both for local coverage
-        title: ['Source Sans 3','Source Sans Pro', ...defaultTheme.fontFamily.sans]
+        sans: ['"Source Sans 3"','"Source Sans Pro"', ...defaultTheme.fontFamily.sans], // source sans 3 == Source Sans Pro // add both for local coverage
+        title: ['"Source Sans 3"','"Source Sans Pro"', ...defaultTheme.fontFamily.sans]
       },
     },
   },
