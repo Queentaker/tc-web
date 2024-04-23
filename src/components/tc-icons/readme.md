@@ -9,7 +9,7 @@
 
 | Property   | Attribute | Description | Type                                                          | Default     |
 | ---------- | --------- | ----------- | ------------------------------------------------------------- | ----------- |
-| `benefits` | --        |             | `{ iconPath: string; title: string; description: string; }[]` | `undefined` |
+| `benefits` | --        |             | `{ imageSrc: string; title: string; description: string; }[]` | `undefined` |
 
 
 ----------------------------------------------

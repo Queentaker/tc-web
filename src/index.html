@@ -10,13 +10,20 @@
   </head>
   <body>
 <tc-title  text ="Offene Stellen"> </tc-title>
-<tc-testimonial image-src="https://cdn-4.motorsport.com/images/mgl/YEQ1pGwY/s800/lewis-hamilton-mercedes.jpg"
+<tc-testimonial image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmanuel.fcfcf50d.jpg&w=1920&q=75"
  quote="I loved being able to work everywehre" name="Lewis Hamilton" pro="Freedom" role = "Racer good at right code quickly"
  image-on-left="true"></tc-testimonial>
 
- <tc-testimonial image-src="https://cdn-4.motorsport.com/images/mgl/YEQ1pGwY/s800/lewis-hamilton-mercedes.jpg"
+ <tc-testimonial image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpascal.cd3140df.jpg&w=1920&q=75"
  quote="I loved being able to work everywehre" name="Lewis Hamilton" pro="Freedom" role = "Racer good at right code quickly"
  image-on-left="false"></tc-testimonial>
+ <tc-benefits-section benefits='[
+  {"imageSrc":"https://example.com/path-to-icon1.png", "title":"Fast Performance", "description":"Our application runs at lightning speed."},
+  {"imageSrc":"https://example.com/path-to-icon2.png", "title":"Reliability", "description":"Dependable service with 99.9% uptime."},
+  {"imageSrc":"https://example.com/path-to-icon3.png", "title":"Scalability", "description":"Easily scale your application to handle increased load."},
+  {"imageSrc":"https://example.com/path-to-icon4.png", "title":"User Friendly", "description":"Intuitive design for an excellent user experience."}
+]'></tc-benefits-section>
+
 
 
 <tc-job-card 
@@ -27,6 +34,32 @@ image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2
 
 ></tc-job-card>
 
+<tc-job-card 
+image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
+  job-title="Senior IT"
+  short-description="Entwicklung von Geschäftsapplikationen, WebApps, Games und weiterer Projekte"
+  detailed-description="Diese Position ist für Studierende ab dem 5. Semester Informatik im Haupt- oder Nebenfach, welche bereits Programmiererfahrung haben, bevorzugterweise mit React. Hier arbeitet man in IT-Projekten mit, bei welchen WebApps, Games oder andere Produkte implementiert werden und hilft bei Erweiterungen und Modernisierung bestehender Applikationen sowie bei der Konzeptionierung neuer Ideen.
 
-  </body>
+  Bei einer Bewerbung für diese Position wirst du von uns eine kleine React Programmier-Challenge erhalten, mit der du deine Fähigkeiten beweisen kannst. Das erlaubt uns, beim Interview auf nicht aussagekräftige technische Fragen (“Whiteboard-Coding”) zu verzichten :)"
+
+></tc-job-card>
+
+
+<tc-favorite-tech fav-title="Mehr Informationen über uns? Unsere Lieblingstechnologien und Frameworks" 
+technologies='[
+  {"imgSrc":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png", "name":"React", "description":"ReactJS für performante Webapplikationen"},
+  {"imgSrc":"https://path-to-your-server/node-image.png", "name":"Node", "description":"NodeJS als Backend für WebApps"},
+  {"imgSrc":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png", "name":"Python", "description":"Python für statistische Modellierung und Auswertung"}
+]'></tc-favorite-tech>
+
+<segment-container id="technologies" seg-title="Mehr Informationen über uns? Unsere Lieblingstechnologien und Frameworks" background-color="#ffffff">
+  <div class="grid grid-cols-2 gap-8 md:gap-16 md:grid-cols-3">
+    <tc-framework-item image="image1.png" title="React"></tc-framework-item>
+
+</segment-container>
+
+
+
+
+</body>
 </html>

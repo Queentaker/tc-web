@@ -1,23 +1,21 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
-  content: [],
+  content: ['./src/**/*.{html,js,tsx}'],
   theme: {
-    fontFamily: {
-      mono: [...defaultTheme.fontFamily.mono],
-      sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
-      title: ['Dongle', ...defaultTheme.fontFamily.sans]
-    },
     extend: {
-      height: {
-        hero: '4.5rem'
+      fontFamily: {
+        mono: [...defaultTheme.fontFamily.mono],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans], // source sans 3 == Source Sans Pro // add both for local coverage
+        title: ['Dongle', ...defaultTheme.fontFamily.sans]
       },
-      padding: {
-        hero: '4.5rem'
-      }
     },
   },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
   ],
+  corePlugins: {
+    preflight: false,
+  },
 }

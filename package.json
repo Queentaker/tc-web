@@ -22,7 +22,9 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^4.15.0"
+    "@stencil/core": "^4.15.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.12"
   },
   "license": "MIT",
   "devDependencies": {
