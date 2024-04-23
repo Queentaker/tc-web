@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: [...defaultTheme.fontFamily.mono],
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans], // source sans 3 == Source Sans Pro // add both for local coverage
-        title: ['Dongle', ...defaultTheme.fontFamily.sans]
+        
+        sans: ['Source Sans 3','Source Sans Pro', ...defaultTheme.fontFamily.sans], // source sans 3 == Source Sans Pro // add both for local coverage
+        title: ['Source Sans 3','Source Sans Pro', ...defaultTheme.fontFamily.sans]
       },
     },
   },

@@ -10,7 +10,7 @@ export class TcHeading {
 
   render() {
     return (
-      <h3 class="!mb-12 text-3xl font-mono text-center md:text-4xl">
+      <h3 class="!mb-12 text-3xl font-sans text-center md:text-4xl">
         {this.text}
       </h3>
     );

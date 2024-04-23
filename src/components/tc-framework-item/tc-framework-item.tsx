@@ -1,22 +1,23 @@
-// framework.tsx
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'framework-item',
-  styleUrl: 'tc-framework-item.css', // Your CSS file for styles
-  shadow: true // Use Shadow DOM for style encapsulation
+  tag: 'tc-framework-item',
+  styleUrl: 'tc-framework-item.css',
+  shadow: true
 })
 export class FrameworkItem {
   @Prop() image: string;
-  @Prop() title: string;
+  @Prop() techTitle: string;
 
   render() {
     return (
       <div class="flex flex-col items-center">
-        <div class="relative w-full h-16">
-          <img src={this.image} alt={this.title} />
+        <div class="relative w-16 h-16"> 
+          <div class="w-full pb-[100%] relative">
+            <img src={this.image} alt={this.techTitle} class="absolute w-full h-full object-contain" />
+          </div>
         </div>
-        <p class="mt-2 text-lg text-center">{this.title}</p>
+        <p class="mt-2 text-lg text-center">{this.techTitle}</p>
       </div>
     );
   }

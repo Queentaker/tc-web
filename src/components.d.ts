@@ -6,27 +6,29 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface FrameworkItem {
-        "image": string;
-        "title": string;
+    interface AdvantageColumn {
+        "advantageText": string;
+        "advantageTitle": string;
+        "iconColor": string;
+        "iconName": string;
     }
     interface SegmentContainer {
-        "backgroundColor"?: string;
-        "id": string;
+        "backgroundColor": string;
         "segTitle": string;
     }
-    interface TcBenefitsSection {
-        "benefits": { imageSrc: string, title: string, description: string }[];
+    interface TcFrameworkItem {
+        "image": string;
+        "techTitle": string;
     }
-    interface TcFavoriteTech {
-        "favTitle": string;
-        "technologies": Array<{ imgSrc: string; name: string; description: string }>;
+    interface TcGridContainer {
     }
     interface TcJobCard {
         "detailedDescription": string;
         "imageSrc": string;
         "jobTitle": string;
         "shortDescription": string;
+    }
+    interface TcKContainer {
     }
     interface TcTestimonial {
         "altText": string;
@@ -42,11 +44,11 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLFrameworkItemElement extends Components.FrameworkItem, HTMLStencilElement {
+    interface HTMLAdvantageColumnElement extends Components.AdvantageColumn, HTMLStencilElement {
     }
-    var HTMLFrameworkItemElement: {
-        prototype: HTMLFrameworkItemElement;
-        new (): HTMLFrameworkItemElement;
+    var HTMLAdvantageColumnElement: {
+        prototype: HTMLAdvantageColumnElement;
+        new (): HTMLAdvantageColumnElement;
     };
     interface HTMLSegmentContainerElement extends Components.SegmentContainer, HTMLStencilElement {
     }
@@ -54,23 +56,29 @@ declare global {
         prototype: HTMLSegmentContainerElement;
         new (): HTMLSegmentContainerElement;
     };
-    interface HTMLTcBenefitsSectionElement extends Components.TcBenefitsSection, HTMLStencilElement {
+    interface HTMLTcFrameworkItemElement extends Components.TcFrameworkItem, HTMLStencilElement {
     }
-    var HTMLTcBenefitsSectionElement: {
-        prototype: HTMLTcBenefitsSectionElement;
-        new (): HTMLTcBenefitsSectionElement;
+    var HTMLTcFrameworkItemElement: {
+        prototype: HTMLTcFrameworkItemElement;
+        new (): HTMLTcFrameworkItemElement;
     };
-    interface HTMLTcFavoriteTechElement extends Components.TcFavoriteTech, HTMLStencilElement {
+    interface HTMLTcGridContainerElement extends Components.TcGridContainer, HTMLStencilElement {
     }
-    var HTMLTcFavoriteTechElement: {
-        prototype: HTMLTcFavoriteTechElement;
-        new (): HTMLTcFavoriteTechElement;
+    var HTMLTcGridContainerElement: {
+        prototype: HTMLTcGridContainerElement;
+        new (): HTMLTcGridContainerElement;
     };
     interface HTMLTcJobCardElement extends Components.TcJobCard, HTMLStencilElement {
     }
     var HTMLTcJobCardElement: {
         prototype: HTMLTcJobCardElement;
         new (): HTMLTcJobCardElement;
+    };
+    interface HTMLTcKContainerElement extends Components.TcKContainer, HTMLStencilElement {
+    }
+    var HTMLTcKContainerElement: {
+        prototype: HTMLTcKContainerElement;
+        new (): HTMLTcKContainerElement;
     };
     interface HTMLTcTestimonialElement extends Components.TcTestimonial, HTMLStencilElement {
     }
@@ -85,37 +93,40 @@ declare global {
         new (): HTMLTcTitleElement;
     };
     interface HTMLElementTagNameMap {
-        "framework-item": HTMLFrameworkItemElement;
+        "advantage-column": HTMLAdvantageColumnElement;
         "segment-container": HTMLSegmentContainerElement;
-        "tc-benefits-section": HTMLTcBenefitsSectionElement;
-        "tc-favorite-tech": HTMLTcFavoriteTechElement;
+        "tc-framework-item": HTMLTcFrameworkItemElement;
+        "tc-grid-container": HTMLTcGridContainerElement;
         "tc-job-card": HTMLTcJobCardElement;
+        "tc-k-container": HTMLTcKContainerElement;
         "tc-testimonial": HTMLTcTestimonialElement;
         "tc-title": HTMLTcTitleElement;
     }
 }
 declare namespace LocalJSX {
-    interface FrameworkItem {
-        "image"?: string;
-        "title"?: string;
+    interface AdvantageColumn {
+        "advantageText"?: string;
+        "advantageTitle"?: string;
+        "iconColor"?: string;
+        "iconName"?: string;
     }
     interface SegmentContainer {
         "backgroundColor"?: string;
-        "id"?: string;
         "segTitle"?: string;
     }
-    interface TcBenefitsSection {
-        "benefits"?: { imageSrc: string, title: string, description: string }[];
+    interface TcFrameworkItem {
+        "image"?: string;
+        "techTitle"?: string;
     }
-    interface TcFavoriteTech {
-        "favTitle"?: string;
-        "technologies"?: Array<{ imgSrc: string; name: string; description: string }>;
+    interface TcGridContainer {
     }
     interface TcJobCard {
         "detailedDescription"?: string;
         "imageSrc"?: string;
         "jobTitle"?: string;
         "shortDescription"?: string;
+    }
+    interface TcKContainer {
     }
     interface TcTestimonial {
         "altText"?: string;
@@ -130,11 +141,12 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
-        "framework-item": FrameworkItem;
+        "advantage-column": AdvantageColumn;
         "segment-container": SegmentContainer;
-        "tc-benefits-section": TcBenefitsSection;
-        "tc-favorite-tech": TcFavoriteTech;
+        "tc-framework-item": TcFrameworkItem;
+        "tc-grid-container": TcGridContainer;
         "tc-job-card": TcJobCard;
+        "tc-k-container": TcKContainer;
         "tc-testimonial": TcTestimonial;
         "tc-title": TcTitle;
     }
@@ -143,11 +155,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "framework-item": LocalJSX.FrameworkItem & JSXBase.HTMLAttributes<HTMLFrameworkItemElement>;
+            "advantage-column": LocalJSX.AdvantageColumn & JSXBase.HTMLAttributes<HTMLAdvantageColumnElement>;
             "segment-container": LocalJSX.SegmentContainer & JSXBase.HTMLAttributes<HTMLSegmentContainerElement>;
-            "tc-benefits-section": LocalJSX.TcBenefitsSection & JSXBase.HTMLAttributes<HTMLTcBenefitsSectionElement>;
-            "tc-favorite-tech": LocalJSX.TcFavoriteTech & JSXBase.HTMLAttributes<HTMLTcFavoriteTechElement>;
+            "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
+            "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
+            "tc-k-container": LocalJSX.TcKContainer & JSXBase.HTMLAttributes<HTMLTcKContainerElement>;
             "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
             "tc-title": LocalJSX.TcTitle & JSXBase.HTMLAttributes<HTMLTcTitleElement>;
         }
