@@ -39,9 +39,6 @@ export namespace Components {
         "quote": string;
         "role": string;
     }
-    interface TcTitle {
-        "text": string;
-    }
 }
 declare global {
     interface HTMLAdvantageColumnElement extends Components.AdvantageColumn, HTMLStencilElement {
@@ -86,12 +83,6 @@ declare global {
         prototype: HTMLTcTestimonialElement;
         new (): HTMLTcTestimonialElement;
     };
-    interface HTMLTcTitleElement extends Components.TcTitle, HTMLStencilElement {
-    }
-    var HTMLTcTitleElement: {
-        prototype: HTMLTcTitleElement;
-        new (): HTMLTcTitleElement;
-    };
     interface HTMLElementTagNameMap {
         "advantage-column": HTMLAdvantageColumnElement;
         "segment-container": HTMLSegmentContainerElement;
@@ -100,7 +91,6 @@ declare global {
         "tc-job-card": HTMLTcJobCardElement;
         "tc-k-container": HTMLTcKContainerElement;
         "tc-testimonial": HTMLTcTestimonialElement;
-        "tc-title": HTMLTcTitleElement;
     }
 }
 declare namespace LocalJSX {
@@ -137,9 +127,6 @@ declare namespace LocalJSX {
         "quote"?: string;
         "role"?: string;
     }
-    interface TcTitle {
-        "text"?: string;
-    }
     interface IntrinsicElements {
         "advantage-column": AdvantageColumn;
         "segment-container": SegmentContainer;
@@ -148,7 +135,6 @@ declare namespace LocalJSX {
         "tc-job-card": TcJobCard;
         "tc-k-container": TcKContainer;
         "tc-testimonial": TcTestimonial;
-        "tc-title": TcTitle;
     }
 }
 export { LocalJSX as JSX };
@@ -162,7 +148,6 @@ declare module "@stencil/core" {
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
             "tc-k-container": LocalJSX.TcKContainer & JSXBase.HTMLAttributes<HTMLTcKContainerElement>;
             "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
-            "tc-title": LocalJSX.TcTitle & JSXBase.HTMLAttributes<HTMLTcTitleElement>;
         }
     }
 }

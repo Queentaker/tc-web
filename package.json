@@ -1,6 +1,6 @@
 {
   "name": "tc-web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stencil components for TC website",
   "main": "dist/index.cjs.js",
   "module": "./dist/index.js",
@@ -27,7 +27,6 @@
     "@tailwindcss/typography": "^0.5.12",
     "ionicons": "^7.3.1"
   },
-  "license": "MIT",
   "devDependencies": {
     "@stencil/postcss": "^2.1.0",
     "@stencil/sass": "^2.0.0",

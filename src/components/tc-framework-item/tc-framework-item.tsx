@@ -21,7 +21,7 @@ export class FrameworkItem {
             />
           </div>
         </div>
-        <p class="mt-2 text-lg text-center">{this.techTitle}</p>
+        <p class="mt-2 text-lg text-center font-sans">{this.techTitle}</p>
       </div>
     );
   }
