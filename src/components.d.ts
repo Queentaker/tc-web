@@ -6,15 +6,15 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AdvantageColumn {
-        "advantageText": string;
-        "advantageTitle": string;
-        "iconColor": string;
-        "iconName": string;
-    }
     interface SegmentContainer {
         "backgroundColor": string;
         "segTitle": string;
+    }
+    interface TcAdvantageColumn {
+        "advantageText": string;
+        "advantageTitle": string;
+        "iconColor": string;
+        "svgPath": string;
     }
     interface TcFrameworkItem {
         "image": string;
@@ -41,17 +41,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLAdvantageColumnElement extends Components.AdvantageColumn, HTMLStencilElement {
-    }
-    var HTMLAdvantageColumnElement: {
-        prototype: HTMLAdvantageColumnElement;
-        new (): HTMLAdvantageColumnElement;
-    };
     interface HTMLSegmentContainerElement extends Components.SegmentContainer, HTMLStencilElement {
     }
     var HTMLSegmentContainerElement: {
         prototype: HTMLSegmentContainerElement;
         new (): HTMLSegmentContainerElement;
+    };
+    interface HTMLTcAdvantageColumnElement extends Components.TcAdvantageColumn, HTMLStencilElement {
+    }
+    var HTMLTcAdvantageColumnElement: {
+        prototype: HTMLTcAdvantageColumnElement;
+        new (): HTMLTcAdvantageColumnElement;
     };
     interface HTMLTcFrameworkItemElement extends Components.TcFrameworkItem, HTMLStencilElement {
     }
@@ -84,8 +84,8 @@ declare global {
         new (): HTMLTcTestimonialElement;
     };
     interface HTMLElementTagNameMap {
-        "advantage-column": HTMLAdvantageColumnElement;
         "segment-container": HTMLSegmentContainerElement;
+        "tc-advantage-column": HTMLTcAdvantageColumnElement;
         "tc-framework-item": HTMLTcFrameworkItemElement;
         "tc-grid-container": HTMLTcGridContainerElement;
         "tc-job-card": HTMLTcJobCardElement;
@@ -94,15 +94,15 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface AdvantageColumn {
-        "advantageText"?: string;
-        "advantageTitle"?: string;
-        "iconColor"?: string;
-        "iconName"?: string;
-    }
     interface SegmentContainer {
         "backgroundColor"?: string;
         "segTitle"?: string;
+    }
+    interface TcAdvantageColumn {
+        "advantageText"?: string;
+        "advantageTitle"?: string;
+        "iconColor"?: string;
+        "svgPath"?: string;
     }
     interface TcFrameworkItem {
         "image"?: string;
@@ -128,8 +128,8 @@ declare namespace LocalJSX {
         "role"?: string;
     }
     interface IntrinsicElements {
-        "advantage-column": AdvantageColumn;
         "segment-container": SegmentContainer;
+        "tc-advantage-column": TcAdvantageColumn;
         "tc-framework-item": TcFrameworkItem;
         "tc-grid-container": TcGridContainer;
         "tc-job-card": TcJobCard;
@@ -141,8 +141,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "advantage-column": LocalJSX.AdvantageColumn & JSXBase.HTMLAttributes<HTMLAdvantageColumnElement>;
             "segment-container": LocalJSX.SegmentContainer & JSXBase.HTMLAttributes<HTMLSegmentContainerElement>;
+            "tc-advantage-column": LocalJSX.TcAdvantageColumn & JSXBase.HTMLAttributes<HTMLTcAdvantageColumnElement>;
             "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
