@@ -1,13 +1,13 @@
-# stencil-tailwind-plugin-example
+# TC Webcomponent 
 
-This repo is an example repo for showing the integration of the stencil-tailwind-plugin and StencilJS.
+This repo is for the web-components library for the TC. Technologies used are stencil-tailwind-plugin and StencilJS.
 
-## Getting started with Stencil Component Example
+## Getting started with TC-web
 
 Clone the repo, and install the dependencies:
 
 ```shell
-cd stencil-component-starter
+cd tc-web
 npm install
 ```
 
