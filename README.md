@@ -1,4 +1,4 @@
-# TC Webcomponent 
+# TC Webcomponent
 
 This repo is for the web-components library for the TC. Technologies used are stencil-tailwind-plugin and StencilJS.
 
