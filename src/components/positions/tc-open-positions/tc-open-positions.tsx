@@ -1,4 +1,4 @@
-import { Component, Prop, h, State } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'tc-open-positions',
@@ -6,16 +6,16 @@ import { Component, Prop, h, State } from '@stencil/core';
   shadow: true
 })
 export class OpenPositions {
-  @Prop() positionTitle: string;  // Corrected the property name spelling.
+  @Prop() level: string;  // Corrected the property name spelling.
 
   render() {
     return (
       <div class="mt-8 md:mt-0">
         <h4 class="text-xl font-bold font-sans">
-          Open Positions as {this.positionTitle}
+          Offene Stellen als {this.level}
         </h4>
         <div class="slot-container">
-          <slot> </slot>
+          <slot onSlotchange={this.handleSlotChange}> </slot>
         </div>
       </div>
     );

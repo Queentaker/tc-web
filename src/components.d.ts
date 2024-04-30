@@ -6,6 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AutomatedExamCorrection {
+        "projectDescription": string;
+        "projectTitle": string;
+    }
     interface SegmentContainer {
         "backgroundColor": string;
         "segTitle": string;
@@ -32,13 +36,13 @@ export namespace Components {
     }
     interface TcJobListing {
         "description": string;
+        "jobTitle": string;
         "tags": string;
-        "title": string;
     }
     interface TcKContainer {
     }
     interface TcOpenPositions {
-        "positionTitle": string;
+        "level": string;
     }
     interface TcTestimonial {
         "altText": string;
@@ -51,6 +55,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAutomatedExamCorrectionElement extends Components.AutomatedExamCorrection, HTMLStencilElement {
+    }
+    var HTMLAutomatedExamCorrectionElement: {
+        prototype: HTMLAutomatedExamCorrectionElement;
+        new (): HTMLAutomatedExamCorrectionElement;
+    };
     interface HTMLSegmentContainerElement extends Components.SegmentContainer, HTMLStencilElement {
     }
     var HTMLSegmentContainerElement: {
@@ -106,6 +116,7 @@ declare global {
         new (): HTMLTcTestimonialElement;
     };
     interface HTMLElementTagNameMap {
+        "automated-exam-correction": HTMLAutomatedExamCorrectionElement;
         "segment-container": HTMLSegmentContainerElement;
         "tc-advantage-column": HTMLTcAdvantageColumnElement;
         "tc-framework-item": HTMLTcFrameworkItemElement;
@@ -118,6 +129,10 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AutomatedExamCorrection {
+        "projectDescription"?: string;
+        "projectTitle"?: string;
+    }
     interface SegmentContainer {
         "backgroundColor"?: string;
         "segTitle"?: string;
@@ -144,13 +159,13 @@ declare namespace LocalJSX {
     }
     interface TcJobListing {
         "description"?: string;
+        "jobTitle"?: string;
         "tags"?: string;
-        "title"?: string;
     }
     interface TcKContainer {
     }
     interface TcOpenPositions {
-        "positionTitle"?: string;
+        "level"?: string;
     }
     interface TcTestimonial {
         "altText"?: string;
@@ -162,6 +177,7 @@ declare namespace LocalJSX {
         "role"?: string;
     }
     interface IntrinsicElements {
+        "automated-exam-correction": AutomatedExamCorrection;
         "segment-container": SegmentContainer;
         "tc-advantage-column": TcAdvantageColumn;
         "tc-framework-item": TcFrameworkItem;
@@ -177,6 +193,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "automated-exam-correction": LocalJSX.AutomatedExamCorrection & JSXBase.HTMLAttributes<HTMLAutomatedExamCorrectionElement>;
             "segment-container": LocalJSX.SegmentContainer & JSXBase.HTMLAttributes<HTMLSegmentContainerElement>;
             "tc-advantage-column": LocalJSX.TcAdvantageColumn & JSXBase.HTMLAttributes<HTMLTcAdvantageColumnElement>;
             "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
