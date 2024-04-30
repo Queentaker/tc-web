@@ -15,7 +15,7 @@ export class OpenPositions {
           Open Positions as {this.positionTitle}
         </h4>
         <div class="slot-container">
-          <slot onSlotchange={this.handleSlotChange}></slot>
+          <slot> </slot>
         </div>
       </div>
     );

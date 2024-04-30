@@ -32,7 +32,7 @@ export namespace Components {
     }
     interface TcJobListing {
         "description": string;
-        "tags": Array<string>;
+        "tags": string;
         "title": string;
     }
     interface TcKContainer {
@@ -144,7 +144,7 @@ declare namespace LocalJSX {
     }
     interface TcJobListing {
         "description"?: string;
-        "tags"?: Array<string>;
+        "tags"?: string;
         "title"?: string;
     }
     interface TcKContainer {
