@@ -11,6 +11,7 @@ export class AdvantageColumn {
   @Prop() iconColor: string;
   @Prop() svgPath: string;
   @Prop() svgViewBox: string;
+  @Prop() svgXmlns: string = "http://www.w3.org/2000/svg";
 
   render() {
     return (
@@ -20,14 +21,14 @@ export class AdvantageColumn {
           style={{ backgroundColor: this.iconColor, padding: "20px" }}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns= {this.svgXmlns}
             viewBox={this.svgViewBox}
             class="h-16 w-16"
           >
             <path d={this.svgPath} />
           </svg>
         </div>
-        <h3 class="text-2xl font-normal md:text-3xl font-sans mt-4">
+        <h3 class="text-2xl md:text-3xl font-sans mt-4">
           {this.advantageTitle}
         </h3>
         <p class="prose-lg font-sans mt-2">{this.advantageText}</p>
@@ -35,3 +36,4 @@ export class AdvantageColumn {
     );
   }
 }
+ 
