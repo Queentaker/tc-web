@@ -30,7 +30,15 @@ export namespace Components {
         "jobTitle": string;
         "shortDescription": string;
     }
+    interface TcJobListing {
+        "description": string;
+        "tags": Array<string>;
+        "title": string;
+    }
     interface TcKContainer {
+    }
+    interface TcOpenPositions {
+        "positionTitle": string;
     }
     interface TcTestimonial {
         "altText": string;
@@ -73,11 +81,23 @@ declare global {
         prototype: HTMLTcJobCardElement;
         new (): HTMLTcJobCardElement;
     };
+    interface HTMLTcJobListingElement extends Components.TcJobListing, HTMLStencilElement {
+    }
+    var HTMLTcJobListingElement: {
+        prototype: HTMLTcJobListingElement;
+        new (): HTMLTcJobListingElement;
+    };
     interface HTMLTcKContainerElement extends Components.TcKContainer, HTMLStencilElement {
     }
     var HTMLTcKContainerElement: {
         prototype: HTMLTcKContainerElement;
         new (): HTMLTcKContainerElement;
+    };
+    interface HTMLTcOpenPositionsElement extends Components.TcOpenPositions, HTMLStencilElement {
+    }
+    var HTMLTcOpenPositionsElement: {
+        prototype: HTMLTcOpenPositionsElement;
+        new (): HTMLTcOpenPositionsElement;
     };
     interface HTMLTcTestimonialElement extends Components.TcTestimonial, HTMLStencilElement {
     }
@@ -91,7 +111,9 @@ declare global {
         "tc-framework-item": HTMLTcFrameworkItemElement;
         "tc-grid-container": HTMLTcGridContainerElement;
         "tc-job-card": HTMLTcJobCardElement;
+        "tc-job-listing": HTMLTcJobListingElement;
         "tc-k-container": HTMLTcKContainerElement;
+        "tc-open-positions": HTMLTcOpenPositionsElement;
         "tc-testimonial": HTMLTcTestimonialElement;
     }
 }
@@ -120,7 +142,15 @@ declare namespace LocalJSX {
         "jobTitle"?: string;
         "shortDescription"?: string;
     }
+    interface TcJobListing {
+        "description"?: string;
+        "tags"?: Array<string>;
+        "title"?: string;
+    }
     interface TcKContainer {
+    }
+    interface TcOpenPositions {
+        "positionTitle"?: string;
     }
     interface TcTestimonial {
         "altText"?: string;
@@ -137,7 +167,9 @@ declare namespace LocalJSX {
         "tc-framework-item": TcFrameworkItem;
         "tc-grid-container": TcGridContainer;
         "tc-job-card": TcJobCard;
+        "tc-job-listing": TcJobListing;
         "tc-k-container": TcKContainer;
+        "tc-open-positions": TcOpenPositions;
         "tc-testimonial": TcTestimonial;
     }
 }
@@ -150,7 +182,9 @@ declare module "@stencil/core" {
             "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
+            "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
             "tc-k-container": LocalJSX.TcKContainer & JSXBase.HTMLAttributes<HTMLTcKContainerElement>;
+            "tc-open-positions": LocalJSX.TcOpenPositions & JSXBase.HTMLAttributes<HTMLTcOpenPositionsElement>;
             "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
         }
     }
