@@ -10,6 +10,9 @@ export class AutomatedExamCorrection {
   @Prop () projectTitle: string;
   @Prop () projectDescription: string;
   @State() showDetails: boolean = false;
+  toggleDetails = () => {
+    this.showDetails = !this.showDetails;
+  }
 
   render() {
     return (
@@ -19,7 +22,10 @@ export class AutomatedExamCorrection {
             <h4 class="!m-0 text-xl font-normal md:text-3xl font-sans font-bold">{this.projectTitle}</h4>
             <div class="mt-2 text-lg font-sans font-plain">Entwicklung von innovativen Methoden zur automatisierten Korrektur von offenen Prüfungsaufgaben</div>
             <div class="hidden mt-2 md:block">
-              <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold  font-sans hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Details</button>
+
+              <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold  font-sans hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={this.toggleDetails}>
+              {this.showDetails ? 'Weniger Details' : 'Mehr Details'}
+              </button>
             </div>
           </div>
           <div class="flex flex-row flex-wrap gap-2 mt-2">
