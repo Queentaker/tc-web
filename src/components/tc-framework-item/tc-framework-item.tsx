@@ -6,7 +6,7 @@ import { Component, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class FrameworkItem {
-  @Prop() image: string;
+  @Prop() imageSrc: string;
   @Prop() techTitle: string;
 
   render() {
@@ -15,7 +15,7 @@ export class FrameworkItem {
         <div class="relative w-16 h-16">
           <div class="w-full pb-[100%] relative">
             <img
-              src={this.image}
+              src={this.imageSrc}
               alt={this.techTitle}
               class="absolute w-full h-full object-contain"
             />

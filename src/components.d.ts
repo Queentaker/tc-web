@@ -7,8 +7,12 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AutomatedExamCorrection {
+        "imageSrc": string;
         "projectDescription": string;
+        "projectDetails": string;
+        "projectImage": string;
         "projectTitle": string;
+        "tags": string;
     }
     interface SegmentContainer {
         "backgroundColor": string;
@@ -23,7 +27,7 @@ export namespace Components {
         "svgXmlns": string;
     }
     interface TcFrameworkItem {
-        "image": string;
+        "imageSrc": string;
         "techTitle": string;
     }
     interface TcGridContainer {
@@ -130,8 +134,12 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AutomatedExamCorrection {
+        "imageSrc"?: string;
         "projectDescription"?: string;
+        "projectDetails"?: string;
+        "projectImage"?: string;
         "projectTitle"?: string;
+        "tags"?: string;
     }
     interface SegmentContainer {
         "backgroundColor"?: string;
@@ -146,7 +154,7 @@ declare namespace LocalJSX {
         "svgXmlns"?: string;
     }
     interface TcFrameworkItem {
-        "image"?: string;
+        "imageSrc"?: string;
         "techTitle"?: string;
     }
     interface TcGridContainer {
