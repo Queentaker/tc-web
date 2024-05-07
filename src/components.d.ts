@@ -13,10 +13,11 @@ export namespace Components {
     interface TcAdvantageColumn {
         "advantageText": string;
         "advantageTitle": string;
-        "iconColor": string;
-        "svgPath": string;
-        "svgViewBox": string;
-        "svgXmlns": string;
+        "iconBackground": string;
+        "iconSvgPath": string;
+        "iconSvgViewBox": string;
+        "iconSvgXmlns": string;
+        "iconcolor": string;
     }
     interface TcFrameworkItem {
         "imageSrc": string;
@@ -141,10 +142,11 @@ declare namespace LocalJSX {
     interface TcAdvantageColumn {
         "advantageText"?: string;
         "advantageTitle"?: string;
-        "iconColor"?: string;
-        "svgPath"?: string;
-        "svgViewBox"?: string;
-        "svgXmlns"?: string;
+        "iconBackground"?: string;
+        "iconSvgPath"?: string;
+        "iconSvgViewBox"?: string;
+        "iconSvgXmlns"?: string;
+        "iconcolor"?: string;
     }
     interface TcFrameworkItem {
         "imageSrc"?: string;
