@@ -27,7 +27,7 @@ export class MyTestimonial {
         <img
           alt={this.altText}
           src={this.imageSrc}
-          class="rounded-xl object-cover w-full layout-responsive"
+          class="rounded-xl object-cover max-w-full h-auto"
         />
       </div>
     );

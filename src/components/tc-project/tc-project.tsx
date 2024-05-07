@@ -57,7 +57,7 @@ export class TcProject {
             <div class="flex flex-col gap-8 md:gap-16 md:flex-row">
               <div class="flex-initial md:w-[400px]">
                 <div class="relative">
-                  <img alt="Project Image" src={this.imageSrc}></img>
+                  <img alt="Project Image" src={this.imageSrc} class="max-w-full h-auto"></img>
                 </div>
               </div>
               <div class="flex-1">
