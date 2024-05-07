@@ -29,7 +29,7 @@ export class TcJobCard {
               <img
                 src={this.imageSrc}
                 alt={this.jobTitle}
-                class="w-full object-scale-down max-h-[60%]"
+                class="w-full h-auto max-h-[400px] object-cover"
               />
             </div>
           </div>

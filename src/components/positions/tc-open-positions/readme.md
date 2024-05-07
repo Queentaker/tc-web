@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type     | Default     |
-| --------------- | ---------------- | ----------- | -------- | ----------- |
-| `positionTitle` | `position-title` |             | `string` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `level`  | `level`   |             | `string` | `undefined` |
 
 
 ----------------------------------------------

@@ -7,7 +7,7 @@
 
 | Property    | Attribute    | Description | Type     | Default     |
 | ----------- | ------------ | ----------- | -------- | ----------- |
-| `image`     | `image`      |             | `string` | `undefined` |
+| `imageSrc`  | `image-src`  |             | `string` | `undefined` |
 | `techTitle` | `tech-title` |             | `string` | `undefined` |
 
 

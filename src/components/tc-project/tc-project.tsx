@@ -1,17 +1,16 @@
 import { Component, h, Prop, State } from '@stencil/core';
 
 @Component({
-  tag: 'automated-exam-correction',
+  tag: 'tc-project',
   styleUrl: 'tc-project.css',
   shadow: true
 })
 
-export class AutomatedExamCorrection {
+export class TcProject {
   @Prop () projectTitle: string;
   @Prop () projectDescription: string;
   @Prop () projectDetails: string;  
   @Prop () tags: string = '[]';
-  @Prop () projectImage: string;
   @Prop () imageSrc: string;
 
       
@@ -20,7 +19,7 @@ export class AutomatedExamCorrection {
     return JSON.parse(this.tags);
     } catch (e) {
     console.error('Error parsing tags:', e);
-    return []; // Return empty array in case of error
+    return []; 
     }
 }
 
