@@ -14,18 +14,17 @@ export class TcJobCard {
 
   render() {
     return (
-      <div class="job-card-container m-auto max-w-[90rem] p-4">
-        <div class="job-card-header"></div>
-        <div class="job-card-content flex flex-col gap-16 md:gap-24">
-          <div class="flex flex-col md:flex-row">
-            <div class="job-card-text flex-1">
-              <h4 class="text-3xl font-normal mb-2 font-sans">
+      <div class=" m-auto max-w-[90rem] p-4">
+        <div class=" flex flex-col gap-16 md:gap-24">
+          <div class="flex flex-col md:flex-row md:items-start">
+            <div class=" flex-1">
+              <h4 class="text-3xl font-bold mb-2 font-sans">
                 {this.jobTitle}
               </h4>
               <p class="text-xl mb-1 font-sans">{this.shortDescription}</p>
               <p class="font-sans">{this.detailedDescription}</p>
             </div>
-            <div class="job-card-image relative flex-1 font-sans">
+            <div class=" flex-1">
               <img
                 src={this.imageSrc}
                 alt={this.jobTitle}
