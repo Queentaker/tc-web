@@ -16,17 +16,15 @@ export class AdvantageColumn {
   render() {
     return (
       <div class="flex flex-col items-center">
-        <div
-          class="flex items-center justify-center rounded-full"
-          style={{ backgroundColor: this.iconColor, padding: "20px" }}
+        <div class="flex flex-col w-36 h-36 rounded-full bg-blue-600  items-center justify-center"
         >
-          <svg
-            xmlns={this.svgXmlns}
-            viewBox={this.svgViewBox}
-            class="h-16 w-16"
-          >
-            <path d={this.svgPath} />
+          
+          <svg class = "h-20 w-21" xmlns={this.svgXmlns} viewBox={this.svgViewBox}>
+            <path d={this.svgPath}
+              fill= "white"
+            />
           </svg>
+          
         </div>
         <h3 class="text-2xl md:text-3xl font-sans mt-4">
           {this.advantageTitle}

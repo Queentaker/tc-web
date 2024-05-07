@@ -27,7 +27,7 @@ export class MyTestimonial {
         <img
           alt={this.altText}
           src={this.imageSrc}
-          class="rounded-xl object-cover max-w-full h-auto"
+          class="drop-shadow-2xl object-cover max-w-full h-auto"
         />
       </div>
     );
@@ -52,9 +52,11 @@ export class MyTestimonial {
           <p class="inline font-sans">{this.quote}</p>
           {quoteMarkClose}
         </blockquote>
-        <p class="text-md font-sans">
-          {this.name}, {this.role}
-        </p>
+        <div class=" text-justify font-sans">
+          <p>
+            {this.name}, {this.role}
+          </p>
+        </div>
       </div>
     );
 
