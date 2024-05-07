@@ -45,6 +45,8 @@ export namespace Components {
         "projectDescription": string;
         "projectDetails": string;
         "projectTitle": string;
+        "quote1": string;
+        "quote2": string;
         "tags": string;
     }
     interface TcTestimonial {
@@ -171,6 +173,8 @@ declare namespace LocalJSX {
         "projectDescription"?: string;
         "projectDetails"?: string;
         "projectTitle"?: string;
+        "quote1"?: string;
+        "quote2"?: string;
         "tags"?: string;
     }
     interface TcTestimonial {

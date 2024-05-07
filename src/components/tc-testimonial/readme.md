@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property      | Attribute       | Description | Type      | Default     |
@@ -15,7 +14,6 @@
 | `quote`       | `quote`         |             | `string`  | `undefined` |
 | `role`        | `role`          |             | `string`  | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

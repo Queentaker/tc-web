@@ -21,7 +21,7 @@ export class AdvantageColumn {
           style={{ backgroundColor: this.iconColor, padding: "20px" }}
         >
           <svg
-            xmlns= {this.svgXmlns}
+            xmlns={this.svgXmlns}
             viewBox={this.svgViewBox}
             class="h-16 w-16"
           >
@@ -36,4 +36,3 @@ export class AdvantageColumn {
     );
   }
 }
- 

@@ -1,9 +1,6 @@
 # tc-project
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -15,7 +12,6 @@
 | `projectTitle`       | `project-title`       |             | `string` | `undefined` |
 | `tags`               | `tags`                |             | `string` | `'[]'`      |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property         | Attribute         | Description | Type     | Default                        |
@@ -14,7 +13,6 @@
 | `svgViewBox`     | `svg-view-box`    |             | `string` | `undefined`                    |
 | `svgXmlns`       | `svg-xmlns`       |             | `string` | `"http://www.w3.org/2000/svg"` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

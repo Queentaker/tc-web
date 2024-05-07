@@ -1,9 +1,6 @@
 # tc-job-listing
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -13,7 +10,6 @@
 | `jobTitle`    | `job-title`   |             | `string` | `undefined` |
 | `tags`        | `tags`        |             | `string` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
