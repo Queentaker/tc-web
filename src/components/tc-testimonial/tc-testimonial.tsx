@@ -27,7 +27,7 @@ export class MyTestimonial {
         <img
           alt={this.altText}
           src={this.imageSrc}
-          class="drop-shadow-2xl object-cover max-w-full h-auto"
+          class="drop-shadow-2xl object-cover max-w-full h-auto shadow-slate-700"
         />
       </div>
     );

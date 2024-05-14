@@ -8,20 +8,20 @@ import { Component, Prop, h } from "@stencil/core";
 export class JobListing {
   @Prop() jobTitle: string;
   @Prop() description: string;
-  @Prop() tags: string; // Change to string to accept JSON string
+  @Prop() tags: string;
 
   get tagsArray() {
     try {
       return JSON.parse(this.tags);
     } catch (e) {
       console.error("Error parsing tags:", e);
-      return []; // Return empty array in case of error
+      return []; 
     }
   }
 
   render() {
     return (
-      <div class="job-listing p-4 border-2 border-red-700 border-solid rounded w-4/6">
+      <div class="px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 "> 
         <h5 class="mb-2 text-lg font-bold font-sans">{this.jobTitle}</h5>
         <p class="font-sans">{this.description}</p>
         <ul class="flex flex-row gap-2">

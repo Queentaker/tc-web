@@ -10,7 +10,7 @@ export class OpenPositions {
 
   render() {
     return (
-      <div class="mt-8 md:mt-0">
+      <div class="px-3 mt-8 md:mt-0">
         <h4 class="text-xl font-bold font-sans">
           Offene Stellen als {this.level}
         </h4>

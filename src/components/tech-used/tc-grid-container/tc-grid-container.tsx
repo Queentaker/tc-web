@@ -8,7 +8,7 @@ import { Component, h } from "@stencil/core";
 export class TcContainer {
   render() {
     return (
-      <div class="grid grid-cols-2 gap-8 md:gap-16 md:grid-cols-3">
+      <div class="grid grid-cols-2 gap-8 md:gap-8 md:grid-cols-3">
         <slot> </slot>
       </div>
     );

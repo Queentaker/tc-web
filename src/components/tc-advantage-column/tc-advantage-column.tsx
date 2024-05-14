@@ -8,7 +8,7 @@ import { Component, Prop, h } from "@stencil/core";
 export class AdvantageColumn {
   @Prop() advantageTitle: string;
   @Prop() advantageText: string;
-  @Prop() iconcolor: string = "white";
+  @Prop() iconcolor: string = "ffffff";
   @Prop() iconBackground: string = "black";
   @Prop() iconSvgXmlns: string = "http://www.w3.org/2000/svg";
   @Prop() iconSvgPath: string;
@@ -17,8 +17,8 @@ export class AdvantageColumn {
 
   render() {
     return (
-      <div class="flex flex-col items-center max-w-40">
-        <div class="flex flex-col w-36 h-36 rounded-full bg-[{this.iconcolor}]  items-center justify-center" 
+      <div class="flex flex-col items-center max-w-40 shadow-slate-50">
+        <div class="flex flex-col w-36 h-36 rounded-full  items-center justify-center" 
               style = {{backgroundColor: this.iconBackground}}
         >
           

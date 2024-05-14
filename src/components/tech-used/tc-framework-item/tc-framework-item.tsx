@@ -11,17 +11,17 @@ export class FrameworkItem {
 
   render() {
     return (
-      <div class="flex flex-col items-center">
-        <div class="relative w-16 h-16">
-          <div class="w-full pb-[100%] relative">
-            <img
-              src={this.imageSrc}
-              alt={this.techTitle}
-              class="absolute w-full h-full object-contain"
-            />
-          </div>
+      <div class= "flex flex-col items-center">
+      <div class= "relative w-16 h-16">
+        <div class= "w-full pb-[100%] relative border-8 border-indigo-600">
+        <img
+          src={this.imageSrc}
+          alt={this.techTitle}
+          class= "absolute w-full h-full object-contain"
+        />
         </div>
-        <p class="mt-2 text-lg text-center font-sans">{this.techTitle}</p>
+      </div>
+      <p class="mt-2 text-lg text-center font-sans">{this.techTitle}</p>
       </div>
     );
   }
