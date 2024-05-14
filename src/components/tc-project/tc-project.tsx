@@ -30,7 +30,7 @@ export class TcProject {
 
   render() {
     return (
-      <div class="px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 ">
+      <div class=" px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 ">
         <div class="flex flex-col items-start justify-between md:flex-row">
           <div>
             <h4 class="!m-0 text-xl md:text-3xl font-sans font-bold">
@@ -40,12 +40,12 @@ export class TcProject {
               {this.projectDescription}
             </div>
             <div class="hidden mt-2 md:block">
-              <button
-                class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold  font-sans hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-lg cursor-pointer"
-                onClick={this.toggleDetails}
-              >
-                {this.showDetails ? "Weniger Details" : "Mehr Details"}
-              </button>
+            <button
+            class="text-white font-semibold bg-black font-sans hover:text-white py-2 px-4 border border-blue-400 hover:border-transparent rounded-full cursor-pointer"
+            onClick={this.toggleDetails}
+          >
+            {this.showDetails ? "Weniger Details" : "Mehr Details"}
+          </button>
             </div>
           </div>
           <div class="flex flex-row flex-wrap gap-2 mt-2">
