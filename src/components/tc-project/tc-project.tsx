@@ -30,27 +30,27 @@ export class TcProject {
 
   render() {
     return (
-      <div class="px-3 py-2 border border-gray-200 border-solid shadow cursor-pointer rounded-xl md:p-4 md:px-6 ">
+      <div class=" px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 ">
         <div class="flex flex-col items-start justify-between md:flex-row">
           <div>
-            <h4 class="!m-0 text-xl font-normal md:text-3xl font-sans font-bold">
+            <h4 class="!m-0 text-xl md:text-3xl font-sans font-bold">
               {this.projectTitle}
             </h4>
             <div class="mt-2 text-lg font-sans font-plain">
               {this.projectDescription}
             </div>
             <div class="hidden mt-2 md:block">
-              <button
-                class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold  font-sans hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                onClick={this.toggleDetails}
-              >
-                {this.showDetails ? "Weniger Details" : "Mehr Details"}
-              </button>
+            <button
+            class="text-white font-semibold bg-uzhblue font-sans border-uzhblue hover:text-white  py-2 px-4 border hover:border-transparent rounded-full cursor-pointer"
+            onClick={this.toggleDetails}
+          >
+            {this.showDetails ? "Weniger Details" : "Mehr Details"}
+          </button>
             </div>
           </div>
           <div class="flex flex-row flex-wrap gap-2 mt-2">
             {this.tagsArray.map((tag) => (
-              <div class="px-2 py-1 text-gray-600 bg-gray-200 rounded-lg md:mt-0">
+              <div class="px-2 py-1 text-gray-600 bg-gray-200 md:mt-0 font-semibold font-sans">
                 {tag}
               </div>
             ))}
@@ -70,15 +70,15 @@ export class TcProject {
               </div>
               <div class="flex-1">
                 <p class="prose prose-lg max-w-none">{this.projectDetails}</p>
-                <blockquote class="mt-4 mb-4 text-lg rounded-xl bg-gray-100 p-4 font-sans">
+                <blockquote class="mt-4 mb-4 text-lg  bg-gray-100 p-4 font-sans">
                   <span class="text-4xl text-gray-400">“</span>
-                  <p class="inline font-sans text-sm">{this.quote1}</p>
+                  <p class="inline font-sans  leading-loose">{this.quote1}</p>
                   <span class="text-4xl text-gray-400 leading-none">”</span>
                 </blockquote>
                 {this.quote2 !== "" && (
-                  <blockquote class="mt-4 mb-4 text-lg rounded-xl bg-gray-100 p-4 font-sans">
+                  <blockquote class="mt-4 mb-4 text-lg  bg-gray-100 p-4 font-sans">
                     <span class="text-4xl text-gray-400">“</span>
-                    <p class="inline font-sans text-sm">{this.quote2}</p>
+                    <p class="inline font-sans">{this.quote2}</p>
                     <span class="text-4xl text-gray-400 leading-none">”</span>
                   </blockquote>
                 )}

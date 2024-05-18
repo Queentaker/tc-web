@@ -3,12 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js,tsx}"],
   theme: {
     extend: {
+      colors: {
+        uzhblue: "#0028A5",
+      },
       fontFamily: {
         sans: [
           '"Source Sans 3"',
           '"Source Sans Pro"',
           ...defaultTheme.fontFamily.sans,
-        ], // source sans 3 == Source Sans Pro // add both for local coverage
+        ],
         title: [
           '"Source Sans 3"',
           '"Source Sans Pro"',
