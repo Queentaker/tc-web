@@ -52,6 +52,7 @@ export namespace Components {
     }
     interface TcTestimonial {
         "altText": string;
+        "background": string;
         "imageOnLeft": boolean;
         "imageSrc": string;
         "name": string;
@@ -181,6 +182,7 @@ declare namespace LocalJSX {
     }
     interface TcTestimonial {
         "altText"?: string;
+        "background"?: string;
         "imageOnLeft"?: boolean;
         "imageSrc"?: string;
         "name"?: string;

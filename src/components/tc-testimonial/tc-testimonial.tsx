@@ -13,6 +13,7 @@ export class MyTestimonial {
   @Prop() altText: string = "Picture";
   @Prop() role: string;
   @Prop() pro: string;
+  @Prop() background: string = "white";
 
   render() {
     const imageSection = (
@@ -42,10 +43,19 @@ export class MyTestimonial {
         }}
       >
         <h3 class="text-2xl font-bold font-sans">{this.pro}</h3>
-        <blockquote class="text-lg rounded-xl font-sans mx-1 my-2 relative px-6">  
-          <span class="absolute text-4xl text-uzhblue left-0 top-0">“</span>
-          <p class="inline font-sans leading-tight">{this.quote}</p>
-          <span class="absolute text-4xl text-uzhblue right-0 bottom-0">”</span>
+        <blockquote
+          class={{
+            "text-lg": true,
+            "p-4": true,
+            "m-0": true,
+            "mb-1": true,
+            "font-sans": true,
+          }}
+          style={{ background: this.background }}
+        >
+          <span class="text-4xl text-gray-400">“</span>
+          <p class="inline font-sans leading-loose">{this.quote}</p>
+          <span class="text-4xl text-gray-400 leading-none">”</span>
         </blockquote>
         <div class="text-justify font-sans italic">
           <p>
@@ -57,8 +67,8 @@ export class MyTestimonial {
 
     return (
       <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:flex-row">
-      {this.imageOnLeft ? imageSection : textSection}
-      {this.imageOnLeft ? textSection : imageSection}
+        {this.imageOnLeft ? imageSection : textSection}
+        {this.imageOnLeft ? textSection : imageSection}
       </div>
     );
   }
