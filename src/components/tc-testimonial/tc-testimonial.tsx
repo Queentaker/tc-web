@@ -48,7 +48,6 @@ export class MyTestimonial {
         <blockquote
           class={{
             "text-lg": true,
-            "p-4": true,
             "m-0": true,
             "mb-1": true,
             "font-sans": true,

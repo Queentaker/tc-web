@@ -21,7 +21,7 @@ export class JobListing {
 
   render() {
     return (
-      <div class="px-3 py-2 border border-solid border-uzhblue shadow md:p-4 md:px-6 font-sans font-normal">
+      <div class="px-3 py-2  border-solid border-uzhblue shadow md:p-4 md:px-6 font-sans font-normal m-auto max-w-[90rem]">
         <h5 class="mb-2 text-lg font-bold ">{this.jobTitle}</h5>
         <p>{this.description}</p>
         <ul class="flex flex-row gap-2">

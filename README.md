@@ -93,7 +93,14 @@ and the [UZH Color Palette](https://www.cd.uzh.ch/de/elements.html#UZH-Farben), 
 
 ### Custom colors
 
-"uzhblue" - "#0028A5"
+uzhblue: "#0028A5"
+uzhcyan: "#4AC9E3",
+uzhapple: "#A4D233",
+uzhgold: "#FFC845",
+uzhorange: "FC4C02",
+uzhberry: "#BF0D3E",
+uzhlgrey2: "#EFEFEF",
+uzhlgrey3: "#E7E7E7"
 
 ### Fonts
 

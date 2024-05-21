@@ -5,6 +5,13 @@ module.exports = {
     extend: {
       colors: {
         uzhblue: "#0028A5",
+        uzhcyan: "#4AC9E3",
+        uzhapple: "#A4D233",
+        uzhgold: "#FFC845",
+        uzhorange: "FC4C02",
+        uzhberry: "#BF0D3E",
+        uzhlgrey2: "#EFEFEF",
+        uzhlgrey3: "#E7E7E7"
       },
       fontFamily: {
         sans: [
