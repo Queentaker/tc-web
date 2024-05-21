@@ -11,7 +11,7 @@ export class FrameworkItem {
 
   render() {
     return (
-      <div class="flex flex-col items-center font-normal">
+      <div class="flex flex-col items-center font-normal font-sans">
         <div class="relative w-16 h-16">
           <div class="w-full pb-[100%] relative">
             <img
@@ -21,7 +21,7 @@ export class FrameworkItem {
             />
           </div>
         </div>
-        <p class="mt-2 text-lg text-center font-sans">{this.techTitle}</p>
+        <p class="mt-2 text-lg text-center">{this.techTitle}</p>
       </div>
     );
   }

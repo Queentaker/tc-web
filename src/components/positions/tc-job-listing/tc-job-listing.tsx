@@ -21,12 +21,12 @@ export class JobListing {
 
   render() {
     return (
-      <div class="self-center p-4 border-2 border-red-700 border-solid w-4/6">
-        <h5 class="mb-2 text-lg font-bold font-sans">{this.jobTitle}</h5>
-        <p class="font-sans">{this.description}</p>
+      <div class="self-center p-4 border-2 border-red-700 border-solid w-4/6 font-sans">
+        <h5 class="mb-2 text-lg font-bold ">{this.jobTitle}</h5>
+        <p>{this.description}</p>
         <ul class="flex flex-row gap-2">
           {this.tagsArray.map((tag) => (
-            <div class="px-2 py-1 mt-2 text-gray-600 bg-gray-200 rounded-lg font-sans md:mt-0">
+            <div class="px-2 py-1 mt-2 text-gray-600 bg-gray-200 rounded-lg md:mt-0">
               {tag}
             </div>
           ))}
