@@ -33,7 +33,7 @@ export class TcProject {
       <div class=" px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 ">
         <div class="flex flex-col items-start justify-between md:flex-row">
           <div>
-            <h4 class="!m-0 text-xl md:text-3xl font-sans font-bold">
+            <h4 class="!m-0 text-xl md:text-3xl font-sans font-semibold">
               {this.projectTitle}
             </h4>
             <div class="mt-2 text-lg font-sans font-plain">
@@ -50,7 +50,7 @@ export class TcProject {
           </div>
           <div class="flex flex-row flex-wrap gap-2 mt-2">
             {this.tagsArray.map((tag) => (
-              <div class="px-2 py-1 text-gray-600 bg-gray-200 md:mt-0 font-semibold font-sans">
+              <div class="px-2 py-1 text-gray-600 bg-gray-200 md:mt-0 font-mediumY font-sans">
                 {tag}
               </div>
             ))}

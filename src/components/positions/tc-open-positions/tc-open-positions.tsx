@@ -14,7 +14,7 @@ export class OpenPositions {
         <h4 class="text-xl font-bold font-sans">
           Offene Stellen als {this.level}
         </h4>
-        <div class="slot-container">
+        <div class="slot-container flex flex-col content-center">
           <slot onSlotchange={this.handleSlotChange}> </slot>
         </div>
       </div>

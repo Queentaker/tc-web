@@ -11,7 +11,7 @@ export class FrameworkItem {
 
   render() {
     return (
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center font-normal">
         <div class="relative w-16 h-16">
           <div class="w-full pb-[100%] relative">
             <img

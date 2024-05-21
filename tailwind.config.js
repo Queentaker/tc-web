@@ -18,6 +18,11 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
       },
+      fontWeight: {
+        'normal': '400',
+        'bold': '600',
+        'bolder': '900'
+      }
     },
   },
   plugins: [

@@ -42,7 +42,7 @@ export class MyTestimonial {
           "px-4": true,
         }}
       >
-        <h3 class="text-2xl font-bold font-sans">{this.pro}</h3>
+        <h3 class="text-2xl font-semibold font-sans">{this.pro}</h3>
         <blockquote
           class={{
             "text-lg": true,
@@ -54,10 +54,10 @@ export class MyTestimonial {
           style={{ background: this.background }}
         >
           <span class="text-4xl text-gray-400">“</span>
-          <p class="inline font-sans leading-loose">{this.quote}</p>
+          <p class="inline font-sans font-normal leading-loose">{this.quote}</p>
           <span class="text-4xl text-gray-400 leading-none">”</span>
         </blockquote>
-        <div class="text-justify font-sans italic">
+        <div class="text-justify font-sans font-normal italic">
           <p>
             {this.name}, {this.role}
           </p>
