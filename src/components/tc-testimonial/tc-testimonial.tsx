@@ -6,14 +6,14 @@ import { Component, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class MyTestimonial {
-  @Prop() imageSrc: string;
   @Prop() quote: string;
   @Prop() name: string;
-  @Prop() imageOnLeft: boolean = false; 
-  @Prop() altText: string = "Picture";
   @Prop() role: string;
+  @Prop() imageOnLeft: boolean = false;
+  @Prop() imageSrc: string;
   @Prop() pro: string;
-  @Prop() background: string = "white";
+  @Prop() altText: string = "Picture";
+  @Prop() backgroundColor: string = "#FFFFFFF";
 
   render() {
     const imageSection = (
@@ -54,7 +54,7 @@ export class MyTestimonial {
             "font-sans": true,
             "font-normal": true
           }}
-          style={{ background: this.background }}
+          style={{ background: this.backgroundColor }}
         >
           <span class="text-4xl text-gray-400">“</span>
           <p class="inline leading-loose">{this.quote}</p>
