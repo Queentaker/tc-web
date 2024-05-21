@@ -85,3 +85,18 @@ If you would like to build the application:
 ```shell
 npm run build
 ```
+
+## UZH Fonts & Colorpalette
+
+To make sure that the fonts and styling are aligned with the [UZH Theme](https://www.frontend.uzh.ch/style/current/)
+and the [UZH Color Palette](https://www.cd.uzh.ch/de/elements.html#UZH-Farben), custom fonts and colors where added to the [tailwind configuration file](tailwind.config.js). 
+
+### Custom colors
+
+"uzhblue" - "#0028A5"
+
+### Fonts
+
+The UZH page uses "[Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)", previously known as "Source Sans Pro",  as default font.
+To use it, you can "font-sans".
+Make sure to apply it to each component, to use it.  
