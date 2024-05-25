@@ -53,7 +53,7 @@ export class MyTestimonial {
             "font-sans": true,
             "font-normal": true
           }}
-          style={{ background: this.backgroundColor }}
+          style={{ background: "z" }}
         >
           <span class="text-4xl text-gray-400">“</span>
           <p class="inline leading-loose">{this.quote}</p>

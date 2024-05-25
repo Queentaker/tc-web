@@ -30,7 +30,7 @@ export class TcProject {
 
   render() {
     return (
-      <div class=" px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 font-sans font-normal">
+      <div class=" px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 font-sans font-normal mb-2">
         <div class="flex flex-col items-start justify-between md:flex-row">
           <div>
             <h4 class="!m-0 text-xl md:text-3xl font-semibold">
