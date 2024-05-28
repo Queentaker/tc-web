@@ -1,15 +1,14 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: 'tc-prerequisite', 
-  styleUrl: 'tc-prerequisite.css',
-  shadow: true 
+  tag: "tc-prerequisite",
+  styleUrl: "tc-prerequisite.css",
+  shadow: true,
 })
 export class PrequisiteColumn {
   @Prop() header: string;
   @Prop() requirements: "[]";
 
-  
   get requirementsArray() {
     try {
       return JSON.parse(this.requirements);
@@ -19,7 +18,6 @@ export class PrequisiteColumn {
     }
   }
 
-
   render() {
     return (
       <div class="px-4 py-2 font-sans">
@@ -27,13 +25,13 @@ export class PrequisiteColumn {
           {this.header}
         </h4>
 
-      <ul class="pl-5 ">
-      {this.requirementsArray.map((requirement, index) => (
-        <li key={index} class="mt-1 text-base">
-          {requirement}
-        </li>
-      ))}
-    </ul>
+        <ul class="pl-5 ">
+          {this.requirementsArray.map((requirement, index) => (
+            <li key={index} class="mt-1 text-base">
+              {requirement}
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }

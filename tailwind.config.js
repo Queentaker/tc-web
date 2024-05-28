@@ -11,7 +11,7 @@ module.exports = {
         uzhorange: "FC4C02",
         uzhberry: "#BF0D3E",
         uzhlgrey2: "#EFEFEF",
-        uzhlgrey3: "#E7E7E7"
+        uzhlgrey3: "#E7E7E7",
       },
       fontFamily: {
         sans: [

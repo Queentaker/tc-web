@@ -38,7 +38,7 @@ If for instance you want to get version 1.2.3:
 
 #### Always get latest version (not recommended)
 
-To get the latest version, **not recommend**. you can install it like this. 
+To get the latest version, **not recommend**. you can install it like this.
 
 ```html
 <script type="module" src="https://unpkg.com/tc-web@latest"></script>

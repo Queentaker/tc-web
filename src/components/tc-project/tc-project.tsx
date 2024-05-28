@@ -36,16 +36,14 @@ export class TcProject {
             <h4 class="!m-0 text-xl md:text-3xl font-semibold">
               {this.projectTitle}
             </h4>
-            <div class="mt-2 text-lg">
-              {this.projectDescription}
-            </div>
+            <div class="mt-2 text-lg">{this.projectDescription}</div>
             <div class="hidden mt-2 md:block">
-            <button
-            class="text-white font-semibold bg-uzhblue border-uzhblue hover:text-white  py-2 px-4 border hover:border-transparent rounded-full cursor-pointer"
-            onClick={this.toggleDetails}
-          >
-            {this.showDetails ? "Weniger Details" : "Mehr Details"}
-          </button>
+              <button
+                class="text-white font-semibold bg-uzhblue border-uzhblue hover:text-white  py-2 px-4 border hover:border-transparent rounded-full cursor-pointer"
+                onClick={this.toggleDetails}
+              >
+                {this.showDetails ? "Weniger Details" : "Mehr Details"}
+              </button>
             </div>
           </div>
           <div class="flex flex-row flex-wrap gap-2 mt-2">

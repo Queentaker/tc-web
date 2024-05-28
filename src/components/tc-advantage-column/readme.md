@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property         | Attribute           | Description | Type     | Default                        |
@@ -15,7 +14,6 @@
 | `iconSvgViewBox` | `icon-svg-view-box` |             | `string` | `undefined`                    |
 | `iconSvgXmlns`   | `icon-svg-xmlns`    |             | `string` | `"http://www.w3.org/2000/svg"` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

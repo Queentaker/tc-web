@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property             | Attribute             | Description | Type     | Default     |
@@ -15,7 +14,6 @@
 | `quote2`             | `quote-2`             |             | `string` | `""`        |
 | `tags`               | `tags`                |             | `string` | `"[]"`      |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

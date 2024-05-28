@@ -40,8 +40,8 @@ export class MyTestimonial {
           "order-2 md:order-2": this.imageOnLeft,
           "order-1 md:order-1": !this.imageOnLeft,
           "px-4": true,
-          "font-sans":true,
-          "font-normal":true
+          "font-sans": true,
+          "font-normal": true,
         }}
       >
         <h3 class="text-2xl font-semibold">{this.pro}</h3>
@@ -51,7 +51,7 @@ export class MyTestimonial {
             "m-0": true,
             "mb-1": true,
             "font-sans": true,
-            "font-normal": true
+            "font-normal": true,
           }}
           style={{ background: this.backgroundColor }}
         >

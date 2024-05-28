@@ -14,7 +14,7 @@ export class TcJobCard {
 
   render() {
     return (
-      <div class=" m-auto max-w-[90rem] p-4 font-sans font-normal"> 
+      <div class=" m-auto max-w-[90rem] p-4 font-sans font-normal">
         <div class=" flex flex-col gap-16 md:gap-24 ">
           <div class="flex flex-col md:flex-row md:items-top">
             <div class="items-top flex-1 p-4">

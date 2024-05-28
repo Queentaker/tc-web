@@ -1,9 +1,6 @@
 # tc-prerequisite
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +9,6 @@
 | `header`       | `header`       |             | `string` | `undefined` |
 | `requirements` | `requirements` |             | `"[]"`   | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
