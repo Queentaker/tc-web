@@ -23,13 +23,13 @@ export class PrequisiteColumn {
   render() {
     return (
       <div class="px-4 py-2 font-sans">
-        <h4 class="text-4xl  md:text-3xl leading-normal">
+        <h4 class="text-4xl  md:text-3xl leading-normal text-center">
           {this.header}
         </h4>
 
-      <ul class="pl-5">
+      <ul class="pl-5 ">
       {this.requirementsArray.map((requirement, index) => (
-        <li key={index} class="text-sm text-gray-700 mt-1">
+        <li key={index} class="mt-1">
           {requirement}
         </li>
       ))}
