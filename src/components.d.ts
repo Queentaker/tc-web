@@ -42,6 +42,12 @@ export namespace Components {
     interface TcOpenPositions {
         "level": string;
     }
+    interface TcPrerequisite {
+        "header": string;
+        "requirements": "[]";
+    }
+    interface TcPrerequisiteContainer {
+    }
     interface TcProject {
         "imageSrc": string;
         "projectDescription": string;
@@ -111,6 +117,18 @@ declare global {
         prototype: HTMLTcOpenPositionsElement;
         new (): HTMLTcOpenPositionsElement;
     };
+    interface HTMLTcPrerequisiteElement extends Components.TcPrerequisite, HTMLStencilElement {
+    }
+    var HTMLTcPrerequisiteElement: {
+        prototype: HTMLTcPrerequisiteElement;
+        new (): HTMLTcPrerequisiteElement;
+    };
+    interface HTMLTcPrerequisiteContainerElement extends Components.TcPrerequisiteContainer, HTMLStencilElement {
+    }
+    var HTMLTcPrerequisiteContainerElement: {
+        prototype: HTMLTcPrerequisiteContainerElement;
+        new (): HTMLTcPrerequisiteContainerElement;
+    };
     interface HTMLTcProjectElement extends Components.TcProject, HTMLStencilElement {
     }
     var HTMLTcProjectElement: {
@@ -132,6 +150,8 @@ declare global {
         "tc-job-listing": HTMLTcJobListingElement;
         "tc-k-container": HTMLTcKContainerElement;
         "tc-open-positions": HTMLTcOpenPositionsElement;
+        "tc-prerequisite": HTMLTcPrerequisiteElement;
+        "tc-prerequisite-container": HTMLTcPrerequisiteContainerElement;
         "tc-project": HTMLTcProjectElement;
         "tc-testimonial": HTMLTcTestimonialElement;
     }
@@ -173,6 +193,12 @@ declare namespace LocalJSX {
     interface TcOpenPositions {
         "level"?: string;
     }
+    interface TcPrerequisite {
+        "header"?: string;
+        "requirements"?: "[]";
+    }
+    interface TcPrerequisiteContainer {
+    }
     interface TcProject {
         "imageSrc"?: string;
         "projectDescription"?: string;
@@ -201,6 +227,8 @@ declare namespace LocalJSX {
         "tc-job-listing": TcJobListing;
         "tc-k-container": TcKContainer;
         "tc-open-positions": TcOpenPositions;
+        "tc-prerequisite": TcPrerequisite;
+        "tc-prerequisite-container": TcPrerequisiteContainer;
         "tc-project": TcProject;
         "tc-testimonial": TcTestimonial;
     }
@@ -217,6 +245,8 @@ declare module "@stencil/core" {
             "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
             "tc-k-container": LocalJSX.TcKContainer & JSXBase.HTMLAttributes<HTMLTcKContainerElement>;
             "tc-open-positions": LocalJSX.TcOpenPositions & JSXBase.HTMLAttributes<HTMLTcOpenPositionsElement>;
+            "tc-prerequisite": LocalJSX.TcPrerequisite & JSXBase.HTMLAttributes<HTMLTcPrerequisiteElement>;
+            "tc-prerequisite-container": LocalJSX.TcPrerequisiteContainer & JSXBase.HTMLAttributes<HTMLTcPrerequisiteContainerElement>;
             "tc-project": LocalJSX.TcProject & JSXBase.HTMLAttributes<HTMLTcProjectElement>;
             "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
         }
