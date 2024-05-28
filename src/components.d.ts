@@ -19,6 +19,8 @@ export namespace Components {
         "iconSvgViewBox": string;
         "iconSvgXmlns": string;
     }
+    interface TcAdvantageGrid {
+    }
     interface TcFrameworkItem {
         "imageSrc": string;
         "techTitle": string;
@@ -36,8 +38,6 @@ export namespace Components {
         "imageSrc": string;
         "jobTitle": string;
         "tags": string;
-    }
-    interface TcKContainer {
     }
     interface TcOpenPositions {
         "level": string;
@@ -81,6 +81,12 @@ declare global {
         prototype: HTMLTcAdvantageColumnElement;
         new (): HTMLTcAdvantageColumnElement;
     };
+    interface HTMLTcAdvantageGridElement extends Components.TcAdvantageGrid, HTMLStencilElement {
+    }
+    var HTMLTcAdvantageGridElement: {
+        prototype: HTMLTcAdvantageGridElement;
+        new (): HTMLTcAdvantageGridElement;
+    };
     interface HTMLTcFrameworkItemElement extends Components.TcFrameworkItem, HTMLStencilElement {
     }
     var HTMLTcFrameworkItemElement: {
@@ -104,12 +110,6 @@ declare global {
     var HTMLTcJobListingElement: {
         prototype: HTMLTcJobListingElement;
         new (): HTMLTcJobListingElement;
-    };
-    interface HTMLTcKContainerElement extends Components.TcKContainer, HTMLStencilElement {
-    }
-    var HTMLTcKContainerElement: {
-        prototype: HTMLTcKContainerElement;
-        new (): HTMLTcKContainerElement;
     };
     interface HTMLTcOpenPositionsElement extends Components.TcOpenPositions, HTMLStencilElement {
     }
@@ -144,11 +144,11 @@ declare global {
     interface HTMLElementTagNameMap {
         "segment-container": HTMLSegmentContainerElement;
         "tc-advantage-column": HTMLTcAdvantageColumnElement;
+        "tc-advantage-grid": HTMLTcAdvantageGridElement;
         "tc-framework-item": HTMLTcFrameworkItemElement;
         "tc-grid-container": HTMLTcGridContainerElement;
         "tc-job-card": HTMLTcJobCardElement;
         "tc-job-listing": HTMLTcJobListingElement;
-        "tc-k-container": HTMLTcKContainerElement;
         "tc-open-positions": HTMLTcOpenPositionsElement;
         "tc-prerequisite": HTMLTcPrerequisiteElement;
         "tc-prerequisite-container": HTMLTcPrerequisiteContainerElement;
@@ -170,6 +170,8 @@ declare namespace LocalJSX {
         "iconSvgViewBox"?: string;
         "iconSvgXmlns"?: string;
     }
+    interface TcAdvantageGrid {
+    }
     interface TcFrameworkItem {
         "imageSrc"?: string;
         "techTitle"?: string;
@@ -187,8 +189,6 @@ declare namespace LocalJSX {
         "imageSrc"?: string;
         "jobTitle"?: string;
         "tags"?: string;
-    }
-    interface TcKContainer {
     }
     interface TcOpenPositions {
         "level"?: string;
@@ -221,11 +221,11 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "segment-container": SegmentContainer;
         "tc-advantage-column": TcAdvantageColumn;
+        "tc-advantage-grid": TcAdvantageGrid;
         "tc-framework-item": TcFrameworkItem;
         "tc-grid-container": TcGridContainer;
         "tc-job-card": TcJobCard;
         "tc-job-listing": TcJobListing;
-        "tc-k-container": TcKContainer;
         "tc-open-positions": TcOpenPositions;
         "tc-prerequisite": TcPrerequisite;
         "tc-prerequisite-container": TcPrerequisiteContainer;
@@ -239,11 +239,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "segment-container": LocalJSX.SegmentContainer & JSXBase.HTMLAttributes<HTMLSegmentContainerElement>;
             "tc-advantage-column": LocalJSX.TcAdvantageColumn & JSXBase.HTMLAttributes<HTMLTcAdvantageColumnElement>;
+            "tc-advantage-grid": LocalJSX.TcAdvantageGrid & JSXBase.HTMLAttributes<HTMLTcAdvantageGridElement>;
             "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
             "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
-            "tc-k-container": LocalJSX.TcKContainer & JSXBase.HTMLAttributes<HTMLTcKContainerElement>;
             "tc-open-positions": LocalJSX.TcOpenPositions & JSXBase.HTMLAttributes<HTMLTcOpenPositionsElement>;
             "tc-prerequisite": LocalJSX.TcPrerequisite & JSXBase.HTMLAttributes<HTMLTcPrerequisiteElement>;
             "tc-prerequisite-container": LocalJSX.TcPrerequisiteContainer & JSXBase.HTMLAttributes<HTMLTcPrerequisiteContainerElement>;
