@@ -14,10 +14,10 @@ export namespace Components {
         "advantageText": string;
         "advantageTitle": string;
         "iconBackground": string;
+        "iconColor": string;
         "iconSvgPath": string;
         "iconSvgViewBox": string;
         "iconSvgXmlns": string;
-        "iconcolor": string;
     }
     interface TcFrameworkItem {
         "imageSrc": string;
@@ -165,10 +165,10 @@ declare namespace LocalJSX {
         "advantageText"?: string;
         "advantageTitle"?: string;
         "iconBackground"?: string;
+        "iconColor"?: string;
         "iconSvgPath"?: string;
         "iconSvgViewBox"?: string;
         "iconSvgXmlns"?: string;
-        "iconcolor"?: string;
     }
     interface TcFrameworkItem {
         "imageSrc"?: string;

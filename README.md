@@ -89,9 +89,9 @@ npm run build
 ## UZH Fonts & Colorpalette
 
 To make sure that the fonts and styling are aligned with the [UZH Theme](https://www.frontend.uzh.ch/style/current/)
-and the [UZH Color Palette](https://www.cd.uzh.ch/de/elements.html#UZH-Farben), custom fonts and colors where added to the [tailwind configuration file](tailwind.config.js). 
+and the [UZH Color Palette](https://www.cd.uzh.ch/de/elements.html#UZH-Farben), custom fonts and colors where added to the [tailwind configuration file](tailwind.config.js).
 
-### Custom colors
+### Custom colors (for development purposes)
 
 uzhblue: "#0028A5"
 uzhcyan: "#4AC9E3",
@@ -102,8 +102,25 @@ uzhberry: "#BF0D3E",
 uzhlgrey2: "#EFEFEF",
 uzhlgrey3: "#E7E7E7"
 
+### Adding colors yourself
+
+For specfic elements like the sections you can modify the color.
+You can **input color as a hex string** like below (currently we are setting it to black)
+
+```html
+<segment-container seg-title="Benefits" background-color="#000000">
+</segment-container>
+```
+
+Or like this in **rgb format**
+
+```html
+<segment-container seg-title="Benefits" background-color="rgb(0,0,0)">
+</segment-container>
+```
+
 ### Fonts
 
-The UZH page uses "[Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)", previously known as "Source Sans Pro",  as default font.
+The UZH page uses "[Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)", previously known as "Source Sans Pro", as default font.
 To use it, you can "font-sans".
-Make sure to apply it to each component, to use it.  
+Make sure to apply it to each component, to use it.
