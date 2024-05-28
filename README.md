@@ -14,9 +14,14 @@ Make sure you create it as a HTML component.
 
 A code field then appears.
 
-### It is important that you import the this libary.
+### Import library
+
+To use these webcomponents you must import the library.
+
+#### Import specific version (recommended)
 
 To get a **specific version of this libary** recommended and won't be affected by change in the code you can get by running:
+Usually you want to get the most recent version published, but want to fix it to that version, since future versions may not suport the elements you are using.
 
 ```html
 <script
@@ -31,8 +36,9 @@ If for instance you want to get version 1.2.3:
 <script type="module" src="https://unpkg.com/tc-web@1.2.3"></script>
 ```
 
-**Latest version**
-To get the latest version, not recommend you can install it like this.
+#### Always get latest version (not recommended)
+
+To get the latest version, **not recommend**. you can install it like this. 
 
 ```html
 <script type="module" src="https://unpkg.com/tc-web@latest"></script>
@@ -40,7 +46,7 @@ To get the latest version, not recommend you can install it like this.
 
 ### How to use a component
 
-**Don't forget to import the libary**
+Make sure that you have first imported the library.
 
 Example
 
