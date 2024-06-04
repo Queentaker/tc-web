@@ -23,6 +23,7 @@ export namespace Components {
     }
     interface TcFrameworkItem {
         "imageSrc": string;
+        "link": string;
         "techTitle": string;
     }
     interface TcGridContainer {
@@ -174,6 +175,7 @@ declare namespace LocalJSX {
     }
     interface TcFrameworkItem {
         "imageSrc"?: string;
+        "link"?: string;
         "techTitle"?: string;
     }
     interface TcGridContainer {
