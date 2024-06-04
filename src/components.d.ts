@@ -30,6 +30,7 @@ export namespace Components {
     }
     interface TcJobCard {
         "detailedDescription": string;
+        "imageOnLeft": boolean;
         "imageSrc": string;
         "jobTitle": string;
         "shortDescription": string;
@@ -182,6 +183,7 @@ declare namespace LocalJSX {
     }
     interface TcJobCard {
         "detailedDescription"?: string;
+        "imageOnLeft"?: boolean;
         "imageSrc"?: string;
         "jobTitle"?: string;
         "shortDescription"?: string;
