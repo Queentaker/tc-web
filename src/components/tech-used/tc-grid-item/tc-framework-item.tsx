@@ -16,7 +16,7 @@ export class FrameworkItem {
 
         <div class="relative w-16 h-16 ">
           <div class="w-full pb-[100%] relative">
-            <a href={this.link}>
+            <a href={this.link} target="_blank" rel="noopener noreferrer">
             <img
               src={this.imageSrc}
               alt={this.techTitle}
@@ -25,7 +25,7 @@ export class FrameworkItem {
             </a>
           </div>
         </div>
-        <a href={this.link} class="no-underline  text-inherit">
+        <a href={this.link} target="_blank" rel="noopener noreferrer" class="no-underline  text-inherit">
         <p class="mt-2 text-lg text-center">{this.techTitle}</p>
         </a>
 
