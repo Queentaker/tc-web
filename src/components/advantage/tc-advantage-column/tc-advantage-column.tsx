@@ -16,7 +16,7 @@ export class AdvantageColumn {
 
   render() {
     return (
-      <div class="flex flex-col items-center max-w-40">
+      <div class="flex flex-col  shadow- items-center max-w-40 ">
         <div
           class="flex flex-col w-36 h-36 rounded-full  items-center justify-center"
           style={{ backgroundColor: this.iconBackground }}

@@ -23,12 +23,14 @@ export class MyTestimonial {
           "order-2 md:order-2": !this.imageOnLeft,
           "w-full md:w-[330px]": true,
           "px-4": true,
+          
+
         }}
       >
         <img
           alt={this.altText}
           src={this.imageSrc}
-          class="drop-shadow-2xl object-cover max-w-full h-auto"
+          class="object-cover max-w-full h-auto shadow-xl rounded-lg"
         />
       </div>
     );
@@ -68,7 +70,7 @@ export class MyTestimonial {
     );
 
     return (
-      <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:flex-row">
+      <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:flex-row m-2">
         {this.imageOnLeft ? imageSection : textSection}
         {this.imageOnLeft ? textSection : imageSection}
       </div>

@@ -11,7 +11,7 @@ export class OpenPositions {
   render() {
     return (
       <div class="mt-8 md:mt-0 font-sans">
-        <h4 class="text-xl font-bold ">Offene Stellen als {this.level}</h4>
+        <h4 class="text-xl font-bold ">{this.level}</h4>
         <div class="slot-container flex flex-col content-center">
           <slot onSlotchange={this.handleSlotChange}> </slot>
         </div>
