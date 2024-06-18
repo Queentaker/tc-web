@@ -13,8 +13,8 @@ export class FrameworkItem {
   render() {
     return (
       <div class="flex flex-col items-center font-normal font-sans m-2">
-        <div class ="shadow-md pt-2 relative w-64 flex flex-col items-center">
-        <div class="relative w-16 h-16  ">
+        <div class ="shadow-md pt-2 relative w-16 md:w-64 flex flex-col items-center">
+        <div class="relative w-8 h-8 md:w-16 md:h-16  ">
           <div class="w-full pb-[100%] relative">
             <a href={this.link} target="_blank" rel="noopener noreferrer">
             <img
@@ -26,7 +26,7 @@ export class FrameworkItem {
           </div>
         </div>
         <a href={this.link} target="_blank" rel="noopener noreferrer" class="no-underline  text-inherit">
-        <p class="mt-2 text-lg text-center">{this.techTitle}</p>
+        <p class="mt-2 text-base md:text-lg text-center">{this.techTitle}</p>
         </a>
         </div>
 

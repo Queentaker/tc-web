@@ -55,34 +55,7 @@ export class TcProject {
           </div>
         </div>
         {this.showDetails && (
-          <div class="pt-4 mt-4 border-t border-gray-200">
-            <div class="flex flex-col gap-8 md:gap-16 md:flex-row items-center">
-              <div class="flex-initial md:w-[400px]">
-                <div class="relative self-center">
-                  <img
-                    alt="Project Image"
-                    src={this.imageSrc}
-                    class="max-w-full h-auto m-auto items-center"
-                  ></img>
-                </div>
-              </div>
-              <div class="flex-1">
-                <p class="prose prose-lg max-w-none">{this.projectDetails}</p>
-                <blockquote class=" text-lg  bg-gray-100 p-4 m-0 mb-1">
-                  <span class="text-4xl text-gray-400">“</span>
-                  <p class="inline leading-loose">{this.quote1}</p>
-                  <span class="text-4xl text-gray-400 leading-none">”</span>
-                </blockquote>
-                {this.quote2 !== "" && (
-                  <blockquote class="m-0 text-lg  bg-gray-100 p-4 mt-1">
-                    <span class="text-4xl text-gray-400">“</span>
-                    <p class="inline">{this.quote2}</p>
-                    <span class="text-4xl text-gray-400 leading-none">”</span>
-                  </blockquote>
-                )}
-              </div>
-            </div>
-          </div>
+          <slot></slot>
         )}
       </div>
     );

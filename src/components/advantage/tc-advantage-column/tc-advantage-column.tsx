@@ -29,7 +29,7 @@ export class AdvantageColumn {
             <path d={this.iconSvgPath} fill={this.iconColor} />
           </svg>
         </div>
-        <h3 class="text-2xl md:text-3xl font-sans mt-4 mb-0">
+        <h3 class="text-xl md:text-3xl font-sans mt-4 mb-0">
           {this.advantageTitle}
         </h3>
         <div class="mt-2 max-w-xs">

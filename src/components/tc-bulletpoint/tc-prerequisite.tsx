@@ -21,7 +21,7 @@ export class PrequisiteColumn {
   render() {
     return (
       <div class="px-4 py-2 font-sans shadow-md">
-        <h4 class="text-4xl  md:text-3xl leading-normal text-center px-4">
+        <h4 class="text-xl  md:text-3xl leading-normal text-center px-4">
           {this.header}
         </h4>
 

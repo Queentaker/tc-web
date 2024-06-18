@@ -17,10 +17,10 @@ export class SegmentContainer {
 
     return (
       <Host style={style}>
-        <div class="px-4 py-8 md:p-16 border-0 border-t border-gray-200 border-solid font-sans font-normal">
+        <div class="px-2 py-4 p-8  md:px-4 md:py-8 md:p-16 border-0 border-t border-white border-solid font-sans font-normal">
           <div class="m-auto max-w-[90rem]">
             {this.segTitle && (
-              <h3 class="mb-12 text-3xl md:text-4xl text-center font-semibold">
+              <h3 class="mb-12 text-2xl md:text-4xl text-center font-semibold">
                 {this.segTitle}
               </h3>
             )}

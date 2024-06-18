@@ -19,12 +19,11 @@ export class MyTestimonial {
     const imageSection = (
       <div
         class={{
-          "order-1 md:order-1": this.imageOnLeft,
-          "order-2 md:order-2": !this.imageOnLeft,
-          "w-full md:w-[330px]": true,
+          "order-1": true,           // Image always first on small screens
+          "md:order-1": this.imageOnLeft, // Order on medium screens
+          "md:order-2": !this.imageOnLeft, // Order on medium screens
+          "w-6/10 md:w-[330px]": true,
           "px-4": true,
-          
-
         }}
       >
         <img
@@ -39,8 +38,9 @@ export class MyTestimonial {
       <div
         class={{
           "flex-1": true,
-          "order-2 md:order-2": this.imageOnLeft,
-          "order-1 md:order-1": !this.imageOnLeft,
+          "order-2": true,           // Text always second on small screens
+          "md:order-2": this.imageOnLeft, // Order on medium screens
+          "md:order-1": !this.imageOnLeft, // Order on medium screens
           "px-4": true,
           "font-sans": true,
           "font-normal": true,
@@ -71,8 +71,8 @@ export class MyTestimonial {
 
     return (
       <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:flex-row m-2">
-        {this.imageOnLeft ? imageSection : textSection}
-        {this.imageOnLeft ? textSection : imageSection}
+        {imageSection}
+        {textSection}
       </div>
     );
   }

@@ -8,7 +8,7 @@ import { Component, h } from "@stencil/core";
 export class PrequisiteContainer {
   render() {
     return (
-      <div class="grid grid-cols-2 gap-8 md:gap-16 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-8 md:gap-16 md:grid-cols-2">
         <slot> </slot>
       </div>
     );
