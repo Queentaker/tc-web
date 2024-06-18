@@ -4,7 +4,9 @@ import { Component, Prop, h } from "@stencil/core";
   tag: "tc-grid-container",
   shadow: true,
   styleUrl: "tc-grid-container.css",
+  
 })
+//enum approach
 export class TcGridContainer {
   @Prop() columns: number = 2; // Default to 2 columns
   @Prop() mdColumns: number = 3; // Default to 3 columns on medium screens
