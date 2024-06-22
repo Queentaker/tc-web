@@ -16,8 +16,8 @@ export class SegmentContainer {
       : {};
 
     return (
-      <Host style={style}>
-        <div class="px-2 py-4 p-8  md:px-4 md:py-8 md:p-16 border-0 border-t border-white border-solid font-sans font-normal">
+      <Host class="m-0" style={style}>
+        <div class="px-0 py-4 p-8 m-0 md:py-8 border-0 border-t border-white border-solid font-sans font-normal">
           <div class="m-auto max-w-[90rem]">
             {this.segTitle && (
               <h3 class="mb-12 text-2xl md:text-4xl text-center font-semibold">

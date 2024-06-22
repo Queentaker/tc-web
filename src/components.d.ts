@@ -28,6 +28,8 @@ export namespace Components {
     }
     interface TcGridContainer {
         "columns": number;
+        "gap": string;
+        "mdColumns": number;
     }
     interface TcJobCard {
         "detailedDescription": string;
@@ -182,6 +184,8 @@ declare namespace LocalJSX {
     }
     interface TcGridContainer {
         "columns"?: number;
+        "gap"?: string;
+        "mdColumns"?: number;
     }
     interface TcJobCard {
         "detailedDescription"?: string;
