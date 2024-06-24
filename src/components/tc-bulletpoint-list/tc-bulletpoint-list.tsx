@@ -21,7 +21,7 @@ export class BulletpointList {
 
   render() {
     return (
-      <div class="px-4 py-2 font-sans shadow-md m-2 h-full">
+      <div class="px-4 py-2 font-sans shadow-md m-2">
         <h4 class="text-2xl  md:text-3xl leading-normal text-center px-4">
           {this.header}
         </h4>
