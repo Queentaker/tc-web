@@ -25,10 +25,12 @@ export namespace Components {
         "imageSrc": string;
         "link": string;
         "techTitle": string;
+        "width": string;
     }
     interface TcGridContainer {
         "columns": number;
         "gap": string;
+        "lgColumns": number;
         "mdColumns": number;
     }
     interface TcJobCard {
@@ -181,10 +183,12 @@ declare namespace LocalJSX {
         "imageSrc"?: string;
         "link"?: string;
         "techTitle"?: string;
+        "width"?: string;
     }
     interface TcGridContainer {
         "columns"?: number;
         "gap"?: string;
+        "lgColumns"?: number;
         "mdColumns"?: number;
     }
     interface TcJobCard {

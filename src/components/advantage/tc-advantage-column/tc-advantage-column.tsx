@@ -16,25 +16,25 @@ export class AdvantageColumn {
 
   render() {
     return (
-      <div class="flex flex-col  shadow-md items-center max-w-40 ">
+      <div class="flex flex-col items-center shadow-md m-2 font-sans w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg break-all h-full">
         <div
-          class="flex flex-col w-36 h-36 rounded-full  items-center justify-center mt-2"
+          class="flex flex-col w-24 h-24 md:w-36 md:h-36 rounded-full items-center justify-center mt-2"
           style={{ backgroundColor: this.iconBackground }}
         >
           <svg
-            class="h-20 w-21 p-2"
+            class="md:h-24 md:w-24 h-12 w-10 p-2"
             xmlns={this.iconSvgXmlns}
             viewBox={this.iconSvgViewBox}
           >
             <path d={this.iconSvgPath} fill={this.iconColor} />
           </svg>
         </div>
-        <h3 class="text-xl md:text-3xl font-sans mt-4 mb-0">
+        <h3 class="text-xl md:text-3xl mt-4 mb-0 text-center">
           {this.advantageTitle}
         </h3>
-        <div class="mt-2 max-w-xs">
-          <p class="prose-lg font-sans p-2">{this.advantageText}</p>
-        </div>
+        <p class="md:text-lg px-2 pt-0 mx-3 mt-2 text-center break-words">
+          {this.advantageText}
+        </p>
       </div>
     );
   }

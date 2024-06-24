@@ -9,28 +9,51 @@ export class FrameworkItem {
   @Prop() imageSrc: string;
   @Prop() techTitle: string;
   @Prop() link: string;
+  @Prop() width: string = "lg";
 
   render() {
     return (
-      <div class="flex flex-col items-center font-normal font-sans m-2">
-        <div class ="shadow-md pt-2 relative w-16 md:w-64 flex flex-col items-center">
-        <div class="relative w-8 h-8 md:w-16 md:h-16  ">
-          <div class="w-full pb-[100%] relative">
-            <a href={this.link} target="_blank" rel="noopener noreferrer">
-            <img
-              src={this.imageSrc}
-              alt={this.techTitle}
-              class="absolute w-full h-full object-contain"
-            />
-            </a>
+      <div class={"flex flex-col items-center font-normal shadow-md font-sans m-2 lg:mx-24 "  }>
+        
+          <div class="relative w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 lg:mt-6">
+            <div class="w-full pb-[100%] relative">
+              <a href={this.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={this.imageSrc}
+                  alt={this.techTitle}
+                  class="absolute w-full h-full object-contain"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-        <a href={this.link} target="_blank" rel="noopener noreferrer" class="no-underline  text-inherit">
-        <p class="mt-2 text-base md:text-lg text-center">{this.techTitle}</p>
-        </a>
-        </div>
-
+          <a
+            href={this.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="no-underline  text-inherit"
+          >
+            <p class="mt-2 text-base md:text-lg text-center">
+              {this.techTitle}
+            </p>
+          </a>
+        
       </div>
     );
+  }
+  private getPadding(): string {
+    return "px-8 md:px-16 lg:px-32";
+  }
+
+  private getWidth(): string {
+    switch (this.width) {
+      case "sm":
+        return "px-2 md:px-4 lg:px-8";
+      case "md":
+        return "px-4 md:px-8 lg:px-16";
+      case "lg":
+        return "px-8 md:px-16 lg:px-32";
+      default:
+        return "px";
+    }
   }
 }

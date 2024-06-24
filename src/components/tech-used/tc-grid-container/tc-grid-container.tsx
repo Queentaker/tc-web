@@ -6,15 +6,16 @@ import { Component, Prop, h } from "@stencil/core";
   styleUrl: "tc-grid-container.css",
 })
 export class TcGridContainer {
-  @Prop() mdColumns: number = 3;
-  @Prop() columns: number = 2;
+  @Prop() mdColumns: number = 2;
+  @Prop() lgColumns: number = 4;
+  @Prop() columns: number = 1;
   @Prop() gap: string ="m"
 
 
    // Default to 2 columns
 
   render() {
-    const gridClasses = `grid ${this.getMdColumns()} ${this.getColumns()} ${this.getGap()}`;
+    const gridClasses = `grid ${this.getMdColumns()} ${this.getColumns()} ${this.getGap()} ${this.getLgColumns()}`;
     return (
       <div class={gridClasses}>
         <slot></slot>
@@ -24,6 +25,8 @@ export class TcGridContainer {
 
   private getMdColumns(): string {
     switch (this.mdColumns) {
+      case 1:
+        return 'md:grid-cols-1';
       case 2:
         return 'md:grid-cols-2';
       case 3:
@@ -38,9 +41,30 @@ export class TcGridContainer {
         return `grid-cols-${this.mdColumns}`; 
     }
   }
+
+  private getLgColumns(): string {
+    switch (this.lgColumns) {
+      case 1:
+        return 'lg:grid-cols-1';
+      case 2:
+        return 'lg:grid-cols-2';
+      case 3:
+        return 'lg:grid-cols-3';
+      case 4:
+        return 'lg:grid-cols-4';
+      case 5:
+        return 'lg:grid-cols-5';
+      case 6:
+        return 'lg:grid-cols-6';
+      default:
+        return `lg:grid-cols-${this.lgColumns}`;
+    }
+  }
   
   private getColumns(): string {
     switch (this.columns) {
+      case 1:
+        return 'grid-cols-1';
       case 2:
         return 'grid-cols-2 ';
       case 3:
@@ -59,15 +83,15 @@ export class TcGridContainer {
   private getGap(): string {
     switch (this.gap) {
       case 's':
-        return 'gap-2 md:gap-4';
+        return 'gap-2 md:gap-4 lg:gap-6';
       case 'm':
-        return 'gap-4 md:gap-8';
+        return 'gap-4 md:gap-8 lg:gap-12';
       case 'l':
-        return 'gap-8 md:gap-12';
+        return 'gap-8 md:gap-12 lg:gap-16';
       case 'xl':
-        return 'gap-12 md:gap-16';
+        return 'gap-12 md:gap-16 lg: gap-20';
       default:
-        return `gap-4 md:gap-8`;
+        return `gap-4 md:gap-8 lg:gap-6`;
     }
   }
 }
