@@ -22,9 +22,8 @@ export namespace Components {
     interface TcAdvantageGrid {
     }
     interface TcBulletpointList {
-        "color": string;
+        "bulletpoints": "[]";
         "header": string;
-        "requirements": "[]";
     }
     interface TcFrameworkItem {
         "imageSrc": string;
@@ -172,9 +171,8 @@ declare namespace LocalJSX {
     interface TcAdvantageGrid {
     }
     interface TcBulletpointList {
-        "color"?: string;
+        "bulletpoints"?: "[]";
         "header"?: string;
-        "requirements"?: "[]";
     }
     interface TcFrameworkItem {
         "imageSrc"?: string;
