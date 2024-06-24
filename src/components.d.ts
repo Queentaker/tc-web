@@ -21,6 +21,11 @@ export namespace Components {
     }
     interface TcAdvantageGrid {
     }
+    interface TcBulletpointList {
+        "color": string;
+        "header": string;
+        "requirements": "[]";
+    }
     interface TcFrameworkItem {
         "imageSrc": string;
         "link": string;
@@ -48,12 +53,6 @@ export namespace Components {
     }
     interface TcOpenPositions {
         "level": string;
-    }
-    interface TcPrerequisite {
-        "header": string;
-        "requirements": "[]";
-    }
-    interface TcPrerequisiteContainer {
     }
     interface TcProject {
         "imageSrc": string;
@@ -94,6 +93,12 @@ declare global {
         prototype: HTMLTcAdvantageGridElement;
         new (): HTMLTcAdvantageGridElement;
     };
+    interface HTMLTcBulletpointListElement extends Components.TcBulletpointList, HTMLStencilElement {
+    }
+    var HTMLTcBulletpointListElement: {
+        prototype: HTMLTcBulletpointListElement;
+        new (): HTMLTcBulletpointListElement;
+    };
     interface HTMLTcFrameworkItemElement extends Components.TcFrameworkItem, HTMLStencilElement {
     }
     var HTMLTcFrameworkItemElement: {
@@ -124,18 +129,6 @@ declare global {
         prototype: HTMLTcOpenPositionsElement;
         new (): HTMLTcOpenPositionsElement;
     };
-    interface HTMLTcPrerequisiteElement extends Components.TcPrerequisite, HTMLStencilElement {
-    }
-    var HTMLTcPrerequisiteElement: {
-        prototype: HTMLTcPrerequisiteElement;
-        new (): HTMLTcPrerequisiteElement;
-    };
-    interface HTMLTcPrerequisiteContainerElement extends Components.TcPrerequisiteContainer, HTMLStencilElement {
-    }
-    var HTMLTcPrerequisiteContainerElement: {
-        prototype: HTMLTcPrerequisiteContainerElement;
-        new (): HTMLTcPrerequisiteContainerElement;
-    };
     interface HTMLTcProjectElement extends Components.TcProject, HTMLStencilElement {
     }
     var HTMLTcProjectElement: {
@@ -152,13 +145,12 @@ declare global {
         "segment-container": HTMLSegmentContainerElement;
         "tc-advantage-column": HTMLTcAdvantageColumnElement;
         "tc-advantage-grid": HTMLTcAdvantageGridElement;
+        "tc-bulletpoint-list": HTMLTcBulletpointListElement;
         "tc-framework-item": HTMLTcFrameworkItemElement;
         "tc-grid-container": HTMLTcGridContainerElement;
         "tc-job-card": HTMLTcJobCardElement;
         "tc-job-listing": HTMLTcJobListingElement;
         "tc-open-positions": HTMLTcOpenPositionsElement;
-        "tc-prerequisite": HTMLTcPrerequisiteElement;
-        "tc-prerequisite-container": HTMLTcPrerequisiteContainerElement;
         "tc-project": HTMLTcProjectElement;
         "tc-testimonial": HTMLTcTestimonialElement;
     }
@@ -178,6 +170,11 @@ declare namespace LocalJSX {
         "iconSvgXmlns"?: string;
     }
     interface TcAdvantageGrid {
+    }
+    interface TcBulletpointList {
+        "color"?: string;
+        "header"?: string;
+        "requirements"?: "[]";
     }
     interface TcFrameworkItem {
         "imageSrc"?: string;
@@ -207,12 +204,6 @@ declare namespace LocalJSX {
     interface TcOpenPositions {
         "level"?: string;
     }
-    interface TcPrerequisite {
-        "header"?: string;
-        "requirements"?: "[]";
-    }
-    interface TcPrerequisiteContainer {
-    }
     interface TcProject {
         "imageSrc"?: string;
         "projectDescription"?: string;
@@ -236,13 +227,12 @@ declare namespace LocalJSX {
         "segment-container": SegmentContainer;
         "tc-advantage-column": TcAdvantageColumn;
         "tc-advantage-grid": TcAdvantageGrid;
+        "tc-bulletpoint-list": TcBulletpointList;
         "tc-framework-item": TcFrameworkItem;
         "tc-grid-container": TcGridContainer;
         "tc-job-card": TcJobCard;
         "tc-job-listing": TcJobListing;
         "tc-open-positions": TcOpenPositions;
-        "tc-prerequisite": TcPrerequisite;
-        "tc-prerequisite-container": TcPrerequisiteContainer;
         "tc-project": TcProject;
         "tc-testimonial": TcTestimonial;
     }
@@ -254,13 +244,12 @@ declare module "@stencil/core" {
             "segment-container": LocalJSX.SegmentContainer & JSXBase.HTMLAttributes<HTMLSegmentContainerElement>;
             "tc-advantage-column": LocalJSX.TcAdvantageColumn & JSXBase.HTMLAttributes<HTMLTcAdvantageColumnElement>;
             "tc-advantage-grid": LocalJSX.TcAdvantageGrid & JSXBase.HTMLAttributes<HTMLTcAdvantageGridElement>;
+            "tc-bulletpoint-list": LocalJSX.TcBulletpointList & JSXBase.HTMLAttributes<HTMLTcBulletpointListElement>;
             "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
             "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
             "tc-open-positions": LocalJSX.TcOpenPositions & JSXBase.HTMLAttributes<HTMLTcOpenPositionsElement>;
-            "tc-prerequisite": LocalJSX.TcPrerequisite & JSXBase.HTMLAttributes<HTMLTcPrerequisiteElement>;
-            "tc-prerequisite-container": LocalJSX.TcPrerequisiteContainer & JSXBase.HTMLAttributes<HTMLTcPrerequisiteContainerElement>;
             "tc-project": LocalJSX.TcProject & JSXBase.HTMLAttributes<HTMLTcProjectElement>;
             "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
         }

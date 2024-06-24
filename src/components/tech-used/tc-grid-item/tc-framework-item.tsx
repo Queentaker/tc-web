@@ -53,7 +53,7 @@ export class FrameworkItem {
       case "lg":
         return "px-8 md:px-16 lg:px-32";
       default:
-        return "px";
+        return "px-2 md:px-4 lg:px-8";
     }
   }
 }
