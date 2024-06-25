@@ -1,11 +1,11 @@
 import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: "tc-testimonial",
-  styleUrl: "tc-testimonial.css",
+  tag: "tc-img-quote-card",
+  styleUrl: "tc-img-quote-card.css",
   shadow: true,
 })
-export class MyTestimonial {
+export class ImgQuoteCard {
   @Prop() quote: string;
   @Prop() name: string;
   @Prop() role: string;
@@ -29,7 +29,7 @@ export class MyTestimonial {
         <img
           alt={this.altText}
           src={this.imageSrc}
-          class="object-cover max-w-full h-auto shadow-xl rounded-lg"
+          class="object-cover max-w-full "
         />
       </div>
     );
@@ -70,7 +70,7 @@ export class MyTestimonial {
     );
 
     return (
-      <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:flex-row m-2">
+      <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:pb-6 md:flex-row m-2 shadow-md">
         {imageSection}
         {textSection}
       </div>

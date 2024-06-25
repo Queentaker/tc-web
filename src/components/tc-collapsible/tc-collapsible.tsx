@@ -1,18 +1,16 @@
 import { Component, h, Prop, State } from "@stencil/core";
 
 @Component({
-  tag: "tc-project",
-  styleUrl: "tc-project.css",
+  tag: "tc-collapsible",
+  styleUrl: "tc-collapsible.css",
   shadow: true,
 })
-export class TcProject {
-  @Prop() projectTitle: string;
-  @Prop() projectDescription: string;
-  @Prop() projectDetails: string;
+export class TcCollapsible {
+  @Prop() colTitle: string;
+  @Prop() description: string ="";
   @Prop() tags: string = "[]";
-  @Prop() imageSrc: string;
-  @Prop() quote1: string;
-  @Prop() quote2: string = "";
+
+
 
   get tagsArray() {
     try {
@@ -34,12 +32,13 @@ export class TcProject {
         <div class="flex flex-col items-start justify-between md:flex-row">
           <div>
             <h4 class="!m-0 text-xl md:text-3xl font-semibold">
-              {this.projectTitle}
+              {this.colTitle}
             </h4>
-            <div class="mt-2 text-lg">{this.projectDescription}</div>
-            <div class="hidden mt-2 md:block">
+            <div class="mt-2 text-lg">{this.description}</div>
+            <div class=" mt-2 md:block">
+              
               <button
-                class="text-white font-semibold bg-uzhblue border-uzhblue hover:text-white  py-2 px-4 border hover:border-transparent rounded-full cursor-pointer"
+                class="text-white font-semibold bg-uzhblue border-uzhblue hover:text-white py-2 px-4 border hover:border-transparent rounded-full cursor-pointer"
                 onClick={this.toggleDetails}
               >
                 {this.showDetails ? "Weniger Details" : "Mehr Details"}

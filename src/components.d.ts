@@ -19,11 +19,14 @@ export namespace Components {
         "iconSvgViewBox": string;
         "iconSvgXmlns": string;
     }
-    interface TcAdvantageGrid {
-    }
     interface TcBulletpointList {
         "bulletpoints": "[]";
         "header": string;
+    }
+    interface TcCollapsible {
+        "colTitle": string;
+        "description": string;
+        "tags": string;
     }
     interface TcFrameworkItem {
         "imageSrc": string;
@@ -36,6 +39,16 @@ export namespace Components {
         "gap": string;
         "lgColumns": number;
         "mdColumns": number;
+    }
+    interface TcImgQuoteCard {
+        "altText": string;
+        "backgroundColor": string;
+        "imageOnLeft": boolean;
+        "imageSrc": string;
+        "name": string;
+        "pro": string;
+        "quote": string;
+        "role": string;
     }
     interface TcJobCard {
         "detailedDescription": string;
@@ -53,25 +66,6 @@ export namespace Components {
     interface TcOpenPositions {
         "level": string;
     }
-    interface TcProject {
-        "imageSrc": string;
-        "projectDescription": string;
-        "projectDetails": string;
-        "projectTitle": string;
-        "quote1": string;
-        "quote2": string;
-        "tags": string;
-    }
-    interface TcTestimonial {
-        "altText": string;
-        "backgroundColor": string;
-        "imageOnLeft": boolean;
-        "imageSrc": string;
-        "name": string;
-        "pro": string;
-        "quote": string;
-        "role": string;
-    }
 }
 declare global {
     interface HTMLSegmentContainerElement extends Components.SegmentContainer, HTMLStencilElement {
@@ -86,17 +80,17 @@ declare global {
         prototype: HTMLTcAdvantageColumnElement;
         new (): HTMLTcAdvantageColumnElement;
     };
-    interface HTMLTcAdvantageGridElement extends Components.TcAdvantageGrid, HTMLStencilElement {
-    }
-    var HTMLTcAdvantageGridElement: {
-        prototype: HTMLTcAdvantageGridElement;
-        new (): HTMLTcAdvantageGridElement;
-    };
     interface HTMLTcBulletpointListElement extends Components.TcBulletpointList, HTMLStencilElement {
     }
     var HTMLTcBulletpointListElement: {
         prototype: HTMLTcBulletpointListElement;
         new (): HTMLTcBulletpointListElement;
+    };
+    interface HTMLTcCollapsibleElement extends Components.TcCollapsible, HTMLStencilElement {
+    }
+    var HTMLTcCollapsibleElement: {
+        prototype: HTMLTcCollapsibleElement;
+        new (): HTMLTcCollapsibleElement;
     };
     interface HTMLTcFrameworkItemElement extends Components.TcFrameworkItem, HTMLStencilElement {
     }
@@ -109,6 +103,12 @@ declare global {
     var HTMLTcGridContainerElement: {
         prototype: HTMLTcGridContainerElement;
         new (): HTMLTcGridContainerElement;
+    };
+    interface HTMLTcImgQuoteCardElement extends Components.TcImgQuoteCard, HTMLStencilElement {
+    }
+    var HTMLTcImgQuoteCardElement: {
+        prototype: HTMLTcImgQuoteCardElement;
+        new (): HTMLTcImgQuoteCardElement;
     };
     interface HTMLTcJobCardElement extends Components.TcJobCard, HTMLStencilElement {
     }
@@ -128,30 +128,17 @@ declare global {
         prototype: HTMLTcOpenPositionsElement;
         new (): HTMLTcOpenPositionsElement;
     };
-    interface HTMLTcProjectElement extends Components.TcProject, HTMLStencilElement {
-    }
-    var HTMLTcProjectElement: {
-        prototype: HTMLTcProjectElement;
-        new (): HTMLTcProjectElement;
-    };
-    interface HTMLTcTestimonialElement extends Components.TcTestimonial, HTMLStencilElement {
-    }
-    var HTMLTcTestimonialElement: {
-        prototype: HTMLTcTestimonialElement;
-        new (): HTMLTcTestimonialElement;
-    };
     interface HTMLElementTagNameMap {
         "segment-container": HTMLSegmentContainerElement;
         "tc-advantage-column": HTMLTcAdvantageColumnElement;
-        "tc-advantage-grid": HTMLTcAdvantageGridElement;
         "tc-bulletpoint-list": HTMLTcBulletpointListElement;
+        "tc-collapsible": HTMLTcCollapsibleElement;
         "tc-framework-item": HTMLTcFrameworkItemElement;
         "tc-grid-container": HTMLTcGridContainerElement;
+        "tc-img-quote-card": HTMLTcImgQuoteCardElement;
         "tc-job-card": HTMLTcJobCardElement;
         "tc-job-listing": HTMLTcJobListingElement;
         "tc-open-positions": HTMLTcOpenPositionsElement;
-        "tc-project": HTMLTcProjectElement;
-        "tc-testimonial": HTMLTcTestimonialElement;
     }
 }
 declare namespace LocalJSX {
@@ -168,11 +155,14 @@ declare namespace LocalJSX {
         "iconSvgViewBox"?: string;
         "iconSvgXmlns"?: string;
     }
-    interface TcAdvantageGrid {
-    }
     interface TcBulletpointList {
         "bulletpoints"?: "[]";
         "header"?: string;
+    }
+    interface TcCollapsible {
+        "colTitle"?: string;
+        "description"?: string;
+        "tags"?: string;
     }
     interface TcFrameworkItem {
         "imageSrc"?: string;
@@ -185,6 +175,16 @@ declare namespace LocalJSX {
         "gap"?: string;
         "lgColumns"?: number;
         "mdColumns"?: number;
+    }
+    interface TcImgQuoteCard {
+        "altText"?: string;
+        "backgroundColor"?: string;
+        "imageOnLeft"?: boolean;
+        "imageSrc"?: string;
+        "name"?: string;
+        "pro"?: string;
+        "quote"?: string;
+        "role"?: string;
     }
     interface TcJobCard {
         "detailedDescription"?: string;
@@ -202,37 +202,17 @@ declare namespace LocalJSX {
     interface TcOpenPositions {
         "level"?: string;
     }
-    interface TcProject {
-        "imageSrc"?: string;
-        "projectDescription"?: string;
-        "projectDetails"?: string;
-        "projectTitle"?: string;
-        "quote1"?: string;
-        "quote2"?: string;
-        "tags"?: string;
-    }
-    interface TcTestimonial {
-        "altText"?: string;
-        "backgroundColor"?: string;
-        "imageOnLeft"?: boolean;
-        "imageSrc"?: string;
-        "name"?: string;
-        "pro"?: string;
-        "quote"?: string;
-        "role"?: string;
-    }
     interface IntrinsicElements {
         "segment-container": SegmentContainer;
         "tc-advantage-column": TcAdvantageColumn;
-        "tc-advantage-grid": TcAdvantageGrid;
         "tc-bulletpoint-list": TcBulletpointList;
+        "tc-collapsible": TcCollapsible;
         "tc-framework-item": TcFrameworkItem;
         "tc-grid-container": TcGridContainer;
+        "tc-img-quote-card": TcImgQuoteCard;
         "tc-job-card": TcJobCard;
         "tc-job-listing": TcJobListing;
         "tc-open-positions": TcOpenPositions;
-        "tc-project": TcProject;
-        "tc-testimonial": TcTestimonial;
     }
 }
 export { LocalJSX as JSX };
@@ -241,15 +221,14 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "segment-container": LocalJSX.SegmentContainer & JSXBase.HTMLAttributes<HTMLSegmentContainerElement>;
             "tc-advantage-column": LocalJSX.TcAdvantageColumn & JSXBase.HTMLAttributes<HTMLTcAdvantageColumnElement>;
-            "tc-advantage-grid": LocalJSX.TcAdvantageGrid & JSXBase.HTMLAttributes<HTMLTcAdvantageGridElement>;
             "tc-bulletpoint-list": LocalJSX.TcBulletpointList & JSXBase.HTMLAttributes<HTMLTcBulletpointListElement>;
+            "tc-collapsible": LocalJSX.TcCollapsible & JSXBase.HTMLAttributes<HTMLTcCollapsibleElement>;
             "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
+            "tc-img-quote-card": LocalJSX.TcImgQuoteCard & JSXBase.HTMLAttributes<HTMLTcImgQuoteCardElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
             "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
             "tc-open-positions": LocalJSX.TcOpenPositions & JSXBase.HTMLAttributes<HTMLTcOpenPositionsElement>;
-            "tc-project": LocalJSX.TcProject & JSXBase.HTMLAttributes<HTMLTcProjectElement>;
-            "tc-testimonial": LocalJSX.TcTestimonial & JSXBase.HTMLAttributes<HTMLTcTestimonialElement>;
         }
     }
 }

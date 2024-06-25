@@ -17,7 +17,7 @@ export class TcJobCard {
     const textClass = this.imageOnLeft ? "md:order-2" : "md:order-1";
 
     return (
-      <div class="m-2 max-w-[90rem] p-2 md:p-4 font-sans shadow-md font-normal">
+      <div class="m-2 mt-6 max-w-[90rem] p-2 md:p-4 font-sans shadow-md font-normal">
         <div class="flex flex-col gap-16 md:gap-24">
           <div class="flex flex-col md:flex-row md:items-top">
             <div class={`items-center flex-1 p-1 md:p-4 order-1 ${imageClass}`}>

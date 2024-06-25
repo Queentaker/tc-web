@@ -26,16 +26,16 @@
       seg-title="Testimonials"
       background-color="#ffffff"
     >
-      <tc-testimonial
+      <tc-img-quote-card
         image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmanuel.fcfcf50d.jpg&w=1920&q=75"
         quote="Mir gefiel am besten, dass ich sehr flexible Arbeitszeiten hatte. Vor Prüfungen konnte ich problemlos reduzieren oder aussetzen während den Semesterferien wiederum mein Budget aufbessern."
         name="Manuel Keller"
         pro="Flexibilität ist Trumpf"
         role="studierte Information Systems und leitet jetzt das IT Team der Weiterbildung"
         image-on-left="true"
-      ></tc-testimonial>
+      ></tc-img-quote-card>
 
-      <tc-testimonial
+      <tc-img-quote-card
         image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpascal.cd3140df.jpg&w=1920&q=75"
         quote="Mir gefiel, dass ich in meiner Arbeit am Institut selbst die Verantwortung für meine Projekte trug. Dadurch konnte ich selber entscheiden, welche Technologien ich einsetzen wollte und konnte viel Neues lernen."
         name="Pascal Zehnder"
@@ -43,7 +43,7 @@
         role="studierte Information Systems"
         image-on-left="false"
         background="#ffffff"
-      ></tc-testimonial>
+      ></tc-img-quote-card>
     </segment-container>
     <segment-container
       id="Mitbringen"
@@ -204,57 +204,37 @@ klöjöljklöjlkjklöjklöjlökjlköjöl"
           image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
         ></tc-job-listing>
       </tc-open-positions>
+
+
+      <tc-job-card
+      image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
+      job-title="Backend Developer"
+    
+      detailed-description="Diese Position ist für Studierende, welche ca. im 3. Semester Informatik im Haupt- oder Nebenfach studieren und erste Programmiererfahrungen haben. Hier entwickelt man beispielsweise unsere CMS, Webseiten, und eAssessment-Tools weiter, erstellt neue eLearning-Kurse, und unterstützt bei allgemeinen IT-Projekten sowie der Erfassung von Inhalten.
+  
+      Es besteht viel Potenzial zur persönlichen Weiterentwicklung (z.B. in Richtung fortgeschrittener Web-Entwicklung und Datenanalyse) mit zunehmender Übernahme von eigener Projektverantwortung."
+    ></tc-job-card>
     </segment-container>
     <segment-container
       id="projects"
       seg-title="Projects"
       background-color="#ffffff"
     >
-      <tc-project
-        project-title="Python Exam Correction"
-        project-description="This is an awesome project that we did in the past"
-        image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhandwriting.2a024a3e.png&w=1920&q=75"
-        project-details="the more time goes on the more it passes"
-        tags='["React", "Node.js", "PostgreSQL"]'
-        quote-1="I loved being able to work every"
-        quote-2="I learned a lot of new things which is great, I loved it,  just today I learned how to make a good coffee"
-      ></tc-project>
-      <tc-project
-        project-title="Python Exam Correction"
-        project-description="This is an awesome project that we did in the past"
-        image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhandwriting.2a024a3e.png&w=1920&q=75"
-        project-details="the more time goes on the more it passes"
-        tags='["React", "Node.js", "PostgreSQL"]'
-        quote-1="I loved being able to work every"
-
-      ></tc-project>
-            <tc-project
-        project-title="Python Exam Correction"
-        project-description="This is an awesome project that we did in the past"
-        image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhandwriting.2a024a3e.png&w=1920&q=75"
-        project-details="the more time goes on the more it passes"
-        tags='["React", "Node.js", "PostgreSQL"]'
-        quote-1="I loved being able to work every"
-        quote-2="I learned a lot of new things which is great, I loved it,  just today I learned how to make a good coffee"
-      ></tc-project>
-      <tc-project
-        project-title="Python Exam Correction"
-
-        image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhandwriting.2a024a3e.png&w=1920&q=75"
-        project-details="the more time goes on the more it passes"
-        tags='["React", "Node.js", "PostgreSQL"]'
-        quote-1="I loved being able to work every"
+      <tc-collapsible
+      
+      col-title="Python Exam Correction"
+      description = "This project is about developing a system that can automatically correct Python exams. The system should be able to read the code of the students, execute it, and compare the output with the expected output. The system should also be able to give feedback to the students about their code."
         
 
       >
-      <tc-testimonial
+      <tc-img-quote-card
       image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmanuel.fcfcf50d.jpg&w=1920&q=75"
       quote="Mir gefiel am besten, dass ich sehr flexible Arbeitszeiten hatte. Vor Prüfungen konnte ich problemlos reduzieren oder aussetzen während den Semesterferien wiederum mein Budget aufbessern."
       name="Manuel Keller"
       pro="Flexibilität ist Trumpf"
       role="studierte Information Systems und leitet jetzt das IT Team der Weiterbildung"
       image-on-left="true"
-    ></tc-testimonial>
+    ></tc-img-quote-card>
     <tc-job-card
     image-src="https://joinus.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode_example.62f57e4a.png&w=1920&q=75"
     job-title="Junior IT"
@@ -263,7 +243,8 @@ klöjöljklöjlkjklöjklöjlökjlköjöl"
 
     Es besteht viel Potenzial zur persönlichen Weiterentwicklung (z.B. in Richtung fortgeschrittener Web-Entwicklung und Datenanalyse) mit zunehmender Übernahme von eigener Projektverantwortung."
   ></tc-job-card>
-  </tc-project>
+  </tc-collapsible
+  >
     </segment-container>
   </body>
 </html>
