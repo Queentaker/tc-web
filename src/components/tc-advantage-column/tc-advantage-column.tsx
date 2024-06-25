@@ -5,9 +5,9 @@ import { Component, Prop, h } from "@stencil/core";
   styleUrl: "tc-advantage-column.css",
   shadow: true,
 })
-export class AdvantageColumn {
-  @Prop() advantageTitle: string;
-  @Prop() advantageText: string;
+export class SVGIconCard {
+  @Prop({ attribute: 'title' }) advantageTitle : string;
+  @Prop() text: string;
   @Prop() iconSvgPath: string;
   @Prop() iconSvgViewBox: string;
   @Prop() iconColor: string = "rgb(255, 255, 255)";
@@ -33,7 +33,7 @@ export class AdvantageColumn {
           {this.advantageTitle}
         </h3>
         <p class="md:text-lg px-2 pt-0 mx-3 mt-2 text-center break-words">
-          {this.advantageText}
+          {this.text}
         </p>
       </div>
     );

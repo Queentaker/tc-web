@@ -6,7 +6,7 @@ import { Component, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class BulletpointList {
-  @Prop() header: string;
+  @Prop({ attribute: 'title' }) header: string;
   @Prop() bulletpoints: "[]";
 
 

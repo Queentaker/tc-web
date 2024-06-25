@@ -11,13 +11,13 @@ export namespace Components {
         "segTitle": string;
     }
     interface TcAdvantageColumn {
-        "advantageText": string;
         "advantageTitle": string;
         "iconBackground": string;
         "iconColor": string;
         "iconSvgPath": string;
         "iconSvgViewBox": string;
         "iconSvgXmlns": string;
+        "text": string;
     }
     interface TcBulletpointList {
         "bulletpoints": "[]";
@@ -28,17 +28,17 @@ export namespace Components {
         "description": string;
         "tags": string;
     }
-    interface TcFrameworkItem {
-        "imageSrc": string;
-        "link": string;
-        "techTitle": string;
-        "width": string;
-    }
     interface TcGridContainer {
         "columns": number;
         "gap": string;
         "lgColumns": number;
         "mdColumns": number;
+    }
+    interface TcGridItem {
+        "giTitle": string;
+        "imageSrc": string;
+        "link": string;
+        "width": string;
     }
     interface TcImgQuoteCard {
         "altText": string;
@@ -92,17 +92,17 @@ declare global {
         prototype: HTMLTcCollapsibleElement;
         new (): HTMLTcCollapsibleElement;
     };
-    interface HTMLTcFrameworkItemElement extends Components.TcFrameworkItem, HTMLStencilElement {
-    }
-    var HTMLTcFrameworkItemElement: {
-        prototype: HTMLTcFrameworkItemElement;
-        new (): HTMLTcFrameworkItemElement;
-    };
     interface HTMLTcGridContainerElement extends Components.TcGridContainer, HTMLStencilElement {
     }
     var HTMLTcGridContainerElement: {
         prototype: HTMLTcGridContainerElement;
         new (): HTMLTcGridContainerElement;
+    };
+    interface HTMLTcGridItemElement extends Components.TcGridItem, HTMLStencilElement {
+    }
+    var HTMLTcGridItemElement: {
+        prototype: HTMLTcGridItemElement;
+        new (): HTMLTcGridItemElement;
     };
     interface HTMLTcImgQuoteCardElement extends Components.TcImgQuoteCard, HTMLStencilElement {
     }
@@ -133,8 +133,8 @@ declare global {
         "tc-advantage-column": HTMLTcAdvantageColumnElement;
         "tc-bulletpoint-list": HTMLTcBulletpointListElement;
         "tc-collapsible": HTMLTcCollapsibleElement;
-        "tc-framework-item": HTMLTcFrameworkItemElement;
         "tc-grid-container": HTMLTcGridContainerElement;
+        "tc-grid-item": HTMLTcGridItemElement;
         "tc-img-quote-card": HTMLTcImgQuoteCardElement;
         "tc-job-card": HTMLTcJobCardElement;
         "tc-job-listing": HTMLTcJobListingElement;
@@ -147,13 +147,13 @@ declare namespace LocalJSX {
         "segTitle"?: string;
     }
     interface TcAdvantageColumn {
-        "advantageText"?: string;
         "advantageTitle"?: string;
         "iconBackground"?: string;
         "iconColor"?: string;
         "iconSvgPath"?: string;
         "iconSvgViewBox"?: string;
         "iconSvgXmlns"?: string;
+        "text"?: string;
     }
     interface TcBulletpointList {
         "bulletpoints"?: "[]";
@@ -164,17 +164,17 @@ declare namespace LocalJSX {
         "description"?: string;
         "tags"?: string;
     }
-    interface TcFrameworkItem {
-        "imageSrc"?: string;
-        "link"?: string;
-        "techTitle"?: string;
-        "width"?: string;
-    }
     interface TcGridContainer {
         "columns"?: number;
         "gap"?: string;
         "lgColumns"?: number;
         "mdColumns"?: number;
+    }
+    interface TcGridItem {
+        "giTitle"?: string;
+        "imageSrc"?: string;
+        "link"?: string;
+        "width"?: string;
     }
     interface TcImgQuoteCard {
         "altText"?: string;
@@ -207,8 +207,8 @@ declare namespace LocalJSX {
         "tc-advantage-column": TcAdvantageColumn;
         "tc-bulletpoint-list": TcBulletpointList;
         "tc-collapsible": TcCollapsible;
-        "tc-framework-item": TcFrameworkItem;
         "tc-grid-container": TcGridContainer;
+        "tc-grid-item": TcGridItem;
         "tc-img-quote-card": TcImgQuoteCard;
         "tc-job-card": TcJobCard;
         "tc-job-listing": TcJobListing;
@@ -223,8 +223,8 @@ declare module "@stencil/core" {
             "tc-advantage-column": LocalJSX.TcAdvantageColumn & JSXBase.HTMLAttributes<HTMLTcAdvantageColumnElement>;
             "tc-bulletpoint-list": LocalJSX.TcBulletpointList & JSXBase.HTMLAttributes<HTMLTcBulletpointListElement>;
             "tc-collapsible": LocalJSX.TcCollapsible & JSXBase.HTMLAttributes<HTMLTcCollapsibleElement>;
-            "tc-framework-item": LocalJSX.TcFrameworkItem & JSXBase.HTMLAttributes<HTMLTcFrameworkItemElement>;
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
+            "tc-grid-item": LocalJSX.TcGridItem & JSXBase.HTMLAttributes<HTMLTcGridItemElement>;
             "tc-img-quote-card": LocalJSX.TcImgQuoteCard & JSXBase.HTMLAttributes<HTMLTcImgQuoteCardElement>;
             "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
             "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
