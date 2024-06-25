@@ -5,11 +5,13 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type     | Default |
-| ----------- | ------------ | ----------- | -------- | ------- |
-| `columns`   | `columns`    |             | `number` | `2`     |
-| `gap`       | `gap`        |             | `string` | `"m"`   |
-| `mdColumns` | `md-columns` |             | `number` | `3`     |
+| Property          | Attribute          | Description | Type     | Default                |
+| ----------------- | ------------------ | ----------- | -------- | ---------------------- |
+| `backgroundColor` | `background-color` |             | `string` | `"rgb(255, 255, 255)"` |
+| `columns`         | `columns`          |             | `number` | `1`                    |
+| `gap`             | `gap`              |             | `string` | `""`                   |
+| `lgColumns`       | `lg-columns`       |             | `number` | `4`                    |
+| `mdColumns`       | `md-columns`       |             | `number` | `2`                    |
 
 
 ----------------------------------------------

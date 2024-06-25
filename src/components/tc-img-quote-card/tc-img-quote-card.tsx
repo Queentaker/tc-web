@@ -13,7 +13,7 @@ export class ImgQuoteCard {
   @Prop() imageSrc: string;
   @Prop() pro: string;
   @Prop() altText: string = "Picture";
-  @Prop() backgroundColor: string = "#FFFFFFF";
+  @Prop() backgroundColor: string = "#FFFFFF";
 
   render() {
     const imageSection = (
@@ -55,7 +55,6 @@ export class ImgQuoteCard {
             "font-sans": true,
             "font-normal": true,
           }}
-          style={{ background: this.backgroundColor }}
         >
           <span class="text-4xl text-gray-400">“</span>
           <p class="inline leading-loose">{this.quote}</p>
@@ -70,7 +69,18 @@ export class ImgQuoteCard {
     );
 
     return (
-      <div class="flex flex-col items-center w-full gap-8 px-4 py-2 md:pb-6 md:flex-row m-2 shadow-md">
+      <div class={{"flex":true,
+      "flex-col":true,
+      "items-center":true,
+      "w-full":true,
+      "gap-8":true,
+      "px-4":true,
+      "py-2":true,
+      "md:pb-6":true,
+      "md:flex-row":true,
+      "m-2":true,
+      "shadow-md":true}}
+      style={{ background: this.backgroundColor }}>
         {imageSection}
         {textSection}
       </div>

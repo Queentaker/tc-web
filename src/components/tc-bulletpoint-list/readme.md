@@ -7,8 +7,8 @@
 
 | Property       | Attribute      | Description | Type     | Default     |
 | -------------- | -------------- | ----------- | -------- | ----------- |
-| `header`       | `header`       |             | `string` | `undefined` |
-| `requirements` | `requirements` |             | `"[]"`   | `undefined` |
+| `bulletpoints` | `bulletpoints` |             | `"[]"`   | `undefined` |
+| `header`       | `title`        |             | `string` | `undefined` |
 
 
 ----------------------------------------------

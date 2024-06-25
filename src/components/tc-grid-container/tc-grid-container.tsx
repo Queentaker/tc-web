@@ -9,7 +9,8 @@ export class TcGridContainer {
   @Prop() mdColumns: number = 2;
   @Prop() lgColumns: number = 4;
   @Prop() columns: number = 1;
-  @Prop() gap: string ="m"
+  @Prop() gap: string =""
+  @Prop() backgroundColor: string = "rgb(255, 255, 255)";
 
 
    // Default to 2 columns
@@ -17,7 +18,8 @@ export class TcGridContainer {
   render() {
     const gridClasses = `grid ${this.getMdColumns()} ${this.getColumns()} ${this.getGap()} ${this.getLgColumns()}`;
     return (
-      <div class={gridClasses}>
+      <div class={gridClasses}
+      style={{ backgroundColor: this.backgroundColor }}>
         <slot></slot>
       </div>
     );
@@ -82,11 +84,11 @@ export class TcGridContainer {
 
   private getGap(): string {
     switch (this.gap) {
-      case 's':
+      case 'sm':
         return 'gap-2 md:gap-4 lg:gap-6';
-      case 'm':
+      case 'md':
         return 'gap-4 md:gap-8 lg:gap-12';
-      case 'l':
+      case 'lg':
         return 'gap-8 md:gap-12 lg:gap-16';
       case 'xl':
         return 'gap-12 md:gap-16 lg: gap-20';

@@ -5,11 +5,12 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type     | Default     |
-| ----------- | ------------ | ----------- | -------- | ----------- |
-| `imageSrc`  | `image-src`  |             | `string` | `undefined` |
-| `link`      | `link`       |             | `string` | `undefined` |
-| `techTitle` | `tech-title` |             | `string` | `undefined` |
+| Property   | Attribute   | Description | Type     | Default     |
+| ---------- | ----------- | ----------- | -------- | ----------- |
+| `giTitle`  | `title`     |             | `string` | `undefined` |
+| `imageSrc` | `image-src` |             | `string` | `undefined` |
+| `link`     | `link`      |             | `string` | `undefined` |
+| `width`    | `width`     |             | `string` | `"lg"`      |
 
 
 ----------------------------------------------

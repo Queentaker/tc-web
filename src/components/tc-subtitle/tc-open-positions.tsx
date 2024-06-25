@@ -31,7 +31,7 @@ export class OpenPositions {
     const container = document.querySelector(".slot-container");
     container.innerHTML = `
       <div class="p-4 border-2 border-gray-200 border-solid rounded">
-        <h5 class="text-lg font-normal font-sans">
+        <h5 class="text-lg font-normal">
           Currently no positions advertised
         </h5>
       </div>

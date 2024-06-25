@@ -5,15 +5,12 @@
 
 ## Properties
 
-| Property             | Attribute             | Description | Type     | Default     |
-| -------------------- | --------------------- | ----------- | -------- | ----------- |
-| `imageSrc`           | `image-src`           |             | `string` | `undefined` |
-| `projectDescription` | `project-description` |             | `string` | `undefined` |
-| `projectDetails`     | `project-details`     |             | `string` | `undefined` |
-| `projectTitle`       | `project-title`       |             | `string` | `undefined` |
-| `quote1`             | `quote-1`             |             | `string` | `undefined` |
-| `quote2`             | `quote-2`             |             | `string` | `""`        |
-| `tags`               | `tags`                |             | `string` | `"[]"`      |
+| Property          | Attribute          | Description | Type     | Default                |
+| ----------------- | ------------------ | ----------- | -------- | ---------------------- |
+| `backgroundColor` | `background-color` |             | `string` | `"rgb(255, 255, 255)"` |
+| `colTitle`        | `col-title`        |             | `string` | `undefined`            |
+| `description`     | `description`      |             | `string` | `""`                   |
+| `tags`            | `tags`             |             | `string` | `"[]"`                 |
 
 
 ----------------------------------------------

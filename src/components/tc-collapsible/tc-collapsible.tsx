@@ -9,6 +9,7 @@ export class TcCollapsible {
   @Prop() colTitle: string;
   @Prop() description: string ="";
   @Prop() tags: string = "[]";
+  @Prop() backgroundColor: string = "rgb(255, 255, 255)";
 
 
 
@@ -28,7 +29,22 @@ export class TcCollapsible {
 
   render() {
     return (
-      <div class=" px-3 py-2 border border-gray-200 border-solid shadow md:p-4 md:px-6 font-sans font-normal mb-2">
+      <div
+    class={{
+      "px-3": true,
+      "py-2": true,
+      "border": true,
+      "border-gray-200": true,
+      "border-solid": true,
+      "shadow": true,
+      "md:p-4": true,
+      "md:px-6": true,
+      "font-sans": true,
+      "font-normal": true,
+      "mb-2": true
+    }}
+  style={{ backgroundColor: this.backgroundColor }}
+>
         <div class="flex flex-col items-start justify-between md:flex-row">
           <div>
             <h4 class="!m-0 text-xl md:text-3xl font-semibold">

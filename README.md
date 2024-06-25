@@ -97,7 +97,7 @@ npm run build
 To make sure that the fonts and styling are aligned with the [UZH Theme](https://www.frontend.uzh.ch/style/current/)
 and the [UZH Color Palette](https://www.cd.uzh.ch/de/elements.html#UZH-Farben), custom fonts and colors where added to the [tailwind configuration file](tailwind.config.js).
 
-### Custom colors (for development purposes)
+### Custom colors (for development and parametrization purposes)
 
 uzhblue: "#0028A5"
 uzhcyan: "#4AC9E3",
