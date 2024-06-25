@@ -6,9 +6,9 @@ import { Component, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class BulletpointList {
-  @Prop({ attribute: 'title' }) header: string;
+  @Prop({ attribute: "title" }) header: string;
   @Prop() bulletpoints: "[]";
-
+  @Prop() backgroundColor: string = "rgb(255, 255, 255)";
 
   get bulletpointArray() {
     try {
@@ -21,7 +21,10 @@ export class BulletpointList {
 
   render() {
     return (
-      <div class="px-4 py-2 font-sans shadow-md m-2">
+      <div
+        class="px-4 py-2 font-sans shadow-md m-2"
+        style={{ backgroundColor: this.backgroundColor }}
+      >
         <h4 class="text-2xl  md:text-3xl leading-normal text-center px-4">
           {this.header}
         </h4>

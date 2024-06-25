@@ -9,12 +9,12 @@
 | ----------------- | ------------------ | ----------- | --------- | ----------- |
 | `altText`         | `alt-text`         |             | `string`  | `"Picture"` |
 | `backgroundColor` | `background-color` |             | `string`  | `"#FFFFFF"` |
+| `borderColor`     | `border-color`     |             | `string`  | `""`        |
 | `imageOnLeft`     | `image-on-left`    |             | `boolean` | `false`     |
 | `imageSrc`        | `image-src`        |             | `string`  | `undefined` |
-| `name`            | `name`             |             | `string`  | `undefined` |
-| `pro`             | `pro`              |             | `string`  | `undefined` |
+| `pro`             | `title`            |             | `string`  | `undefined` |
 | `quote`           | `quote`            |             | `string`  | `undefined` |
-| `role`            | `role`             |             | `string`  | `undefined` |
+| `quotee`          | `quotee`           |             | `string`  | `undefined` |
 
 
 ----------------------------------------------

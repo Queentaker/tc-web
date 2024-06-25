@@ -1,5 +1,7 @@
 # TC Webcomponent
 
+Latest version published "tc-web@0.0.6"
+
 This repo is for the web-components library for the TC. Technologies used are stencil-tailwind-plugin and StencilJS.
 
 ## How to use the Components in Magnolia (or other CMS)

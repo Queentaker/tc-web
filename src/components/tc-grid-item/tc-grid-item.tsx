@@ -7,40 +7,35 @@ import { Component, Prop, h } from "@stencil/core";
 })
 export class GridItem {
   @Prop() imageSrc: string;
-  @Prop({ attribute: 'title' }) giTitle: string;
+  @Prop({ attribute: "title" }) giTitle: string;
   @Prop() link: string;
   @Prop() width: string = "lg";
-  
-
 
   render() {
-    const gridItemStyle =  `flex flex-col items-center font-normal shadow-md font-sans m-2 ${this.getWidth()}`;
+    const gridItemStyle = `flex flex-col items-center font-normal shadow-md font-sans m-2 ${this.getWidth()}`;
     return (
-      
       <div class={gridItemStyle}>
-        
-          <div class="relative w-8 h-8 mt-2 md:w-12 md:h-12 md:mt-4 lg:w-16 lg:h-16 lg:mt-6">
-            <div class="w-full pb-[100%] relative">
-              <a href={this.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={this.imageSrc}
-                  alt={this.giTitle}
-                  class="absolute w-full h-full object-contain"
-                />
-              </a>
-            </div>
+        <div class="relative w-8 h-8 mt-2 md:w-12 md:h-12 md:mt-4 lg:w-16 lg:h-16 lg:mt-6">
+          <div class="w-full pb-[100%] relative">
+            <a href={this.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={this.imageSrc}
+                alt={this.giTitle}
+                class="absolute w-full h-full object-contain"
+              />
+            </a>
           </div>
-          <a
-            href={this.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="no-underline  text-inherit"
-          >
-            <p class="mt-1 md:mt-2 text-base md:text-lg text-center">
-              {this.giTitle}
-            </p>
-          </a>
-        
+        </div>
+        <a
+          href={this.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="no-underline  text-inherit"
+        >
+          <p class="mt-1 md:mt-2 text-base md:text-lg text-center">
+            {this.giTitle}
+          </p>
+        </a>
       </div>
     );
   }

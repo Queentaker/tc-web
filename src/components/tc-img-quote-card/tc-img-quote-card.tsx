@@ -7,19 +7,19 @@ import { Component, Prop, h } from "@stencil/core";
 })
 export class ImgQuoteCard {
   @Prop() quote: string;
-  @Prop() name: string;
-  @Prop() role: string;
+  @Prop() quotee: string;
   @Prop() imageOnLeft: boolean = false;
   @Prop() imageSrc: string;
-  @Prop() pro: string;
+  @Prop({ attribute: "title" }) pro: string;
   @Prop() altText: string = "Picture";
   @Prop() backgroundColor: string = "#FFFFFF";
+  @Prop() borderColor: string = "";
 
   render() {
     const imageSection = (
       <div
         class={{
-          "order-1": true,           // Image always first on small screens
+          "order-1": true, // Image always first on small screens
           "md:order-1": this.imageOnLeft, // Order on medium screens
           "md:order-2": !this.imageOnLeft, // Order on medium screens
           "w-6/10 md:w-[330px]": true,
@@ -38,7 +38,7 @@ export class ImgQuoteCard {
       <div
         class={{
           "flex-1": true,
-          "order-2": true,           // Text always second on small screens
+          "order-2": true, // Text always second on small screens
           "md:order-2": this.imageOnLeft, // Order on medium screens
           "md:order-1": !this.imageOnLeft, // Order on medium screens
           "px-4": true,
@@ -61,26 +61,28 @@ export class ImgQuoteCard {
           <span class="text-4xl text-gray-400 leading-none">”</span>
         </blockquote>
         <div class="text-justify italic">
-          <p>
-            {this.name}, {this.role}
-          </p>
+          <p>{this.quotee}</p>
         </div>
       </div>
     );
 
     return (
-      <div class={{"flex":true,
-      "flex-col":true,
-      "items-center":true,
-      "w-full":true,
-      "gap-8":true,
-      "px-4":true,
-      "py-2":true,
-      "md:pb-6":true,
-      "md:flex-row":true,
-      "m-2":true,
-      "shadow-md":true}}
-      style={{ background: this.backgroundColor }}>
+      <div
+        class={{
+          flex: true,
+          "flex-col": true,
+          "items-center": true,
+          "w-full": true,
+          "gap-8": true,
+          "px-4": true,
+          "py-2": true,
+          "md:pb-6": true,
+          "md:flex-row": true,
+          "m-2": true,
+          "shadow-md": true,
+        }}
+        style={{ background: this.backgroundColor }}
+      >
         {imageSection}
         {textSection}
       </div>

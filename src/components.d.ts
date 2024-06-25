@@ -11,6 +11,7 @@ export namespace Components {
         "segTitle": string;
     }
     interface TcBulletpointList {
+        "backgroundColor": string;
         "bulletpoints": "[]";
         "header": string;
     }
@@ -36,19 +37,20 @@ export namespace Components {
     interface TcImgQuoteCard {
         "altText": string;
         "backgroundColor": string;
+        "borderColor": string;
         "imageOnLeft": boolean;
         "imageSrc": string;
-        "name": string;
         "pro": string;
         "quote": string;
-        "role": string;
+        "quotee": string;
     }
-    interface TcJobCard {
+    interface TcImgTextCard {
+        "borderColor": string;
         "detailedDescription": string;
         "imageOnLeft": boolean;
         "imageSrc": string;
-        "jobTitle": string;
         "shortDescription": string;
+        "tcImgTextCardTitle": string;
     }
     interface TcJobListing {
         "description": string;
@@ -60,13 +62,13 @@ export namespace Components {
         "level": string;
     }
     interface TcSvgIconCard {
+        "advantageTitle": string;
         "backgroundColor": string;
         "iconBackground": string;
         "iconColor": string;
         "iconSvgPath": string;
         "iconSvgViewBox": string;
         "iconSvgXmlns": string;
-        "svgIconTitle": string;
         "text": string;
     }
 }
@@ -107,11 +109,11 @@ declare global {
         prototype: HTMLTcImgQuoteCardElement;
         new (): HTMLTcImgQuoteCardElement;
     };
-    interface HTMLTcJobCardElement extends Components.TcJobCard, HTMLStencilElement {
+    interface HTMLTcImgTextCardElement extends Components.TcImgTextCard, HTMLStencilElement {
     }
-    var HTMLTcJobCardElement: {
-        prototype: HTMLTcJobCardElement;
-        new (): HTMLTcJobCardElement;
+    var HTMLTcImgTextCardElement: {
+        prototype: HTMLTcImgTextCardElement;
+        new (): HTMLTcImgTextCardElement;
     };
     interface HTMLTcJobListingElement extends Components.TcJobListing, HTMLStencilElement {
     }
@@ -138,7 +140,7 @@ declare global {
         "tc-grid-container": HTMLTcGridContainerElement;
         "tc-grid-item": HTMLTcGridItemElement;
         "tc-img-quote-card": HTMLTcImgQuoteCardElement;
-        "tc-job-card": HTMLTcJobCardElement;
+        "tc-img-text-card": HTMLTcImgTextCardElement;
         "tc-job-listing": HTMLTcJobListingElement;
         "tc-open-positions": HTMLTcOpenPositionsElement;
         "tc-svg-icon-card": HTMLTcSvgIconCardElement;
@@ -150,6 +152,7 @@ declare namespace LocalJSX {
         "segTitle"?: string;
     }
     interface TcBulletpointList {
+        "backgroundColor"?: string;
         "bulletpoints"?: "[]";
         "header"?: string;
     }
@@ -175,19 +178,20 @@ declare namespace LocalJSX {
     interface TcImgQuoteCard {
         "altText"?: string;
         "backgroundColor"?: string;
+        "borderColor"?: string;
         "imageOnLeft"?: boolean;
         "imageSrc"?: string;
-        "name"?: string;
         "pro"?: string;
         "quote"?: string;
-        "role"?: string;
+        "quotee"?: string;
     }
-    interface TcJobCard {
+    interface TcImgTextCard {
+        "borderColor"?: string;
         "detailedDescription"?: string;
         "imageOnLeft"?: boolean;
         "imageSrc"?: string;
-        "jobTitle"?: string;
         "shortDescription"?: string;
+        "tcImgTextCardTitle"?: string;
     }
     interface TcJobListing {
         "description"?: string;
@@ -199,13 +203,13 @@ declare namespace LocalJSX {
         "level"?: string;
     }
     interface TcSvgIconCard {
+        "advantageTitle"?: string;
         "backgroundColor"?: string;
         "iconBackground"?: string;
         "iconColor"?: string;
         "iconSvgPath"?: string;
         "iconSvgViewBox"?: string;
         "iconSvgXmlns"?: string;
-        "svgIconTitle"?: string;
         "text"?: string;
     }
     interface IntrinsicElements {
@@ -215,7 +219,7 @@ declare namespace LocalJSX {
         "tc-grid-container": TcGridContainer;
         "tc-grid-item": TcGridItem;
         "tc-img-quote-card": TcImgQuoteCard;
-        "tc-job-card": TcJobCard;
+        "tc-img-text-card": TcImgTextCard;
         "tc-job-listing": TcJobListing;
         "tc-open-positions": TcOpenPositions;
         "tc-svg-icon-card": TcSvgIconCard;
@@ -231,7 +235,7 @@ declare module "@stencil/core" {
             "tc-grid-container": LocalJSX.TcGridContainer & JSXBase.HTMLAttributes<HTMLTcGridContainerElement>;
             "tc-grid-item": LocalJSX.TcGridItem & JSXBase.HTMLAttributes<HTMLTcGridItemElement>;
             "tc-img-quote-card": LocalJSX.TcImgQuoteCard & JSXBase.HTMLAttributes<HTMLTcImgQuoteCardElement>;
-            "tc-job-card": LocalJSX.TcJobCard & JSXBase.HTMLAttributes<HTMLTcJobCardElement>;
+            "tc-img-text-card": LocalJSX.TcImgTextCard & JSXBase.HTMLAttributes<HTMLTcImgTextCardElement>;
             "tc-job-listing": LocalJSX.TcJobListing & JSXBase.HTMLAttributes<HTMLTcJobListingElement>;
             "tc-open-positions": LocalJSX.TcOpenPositions & JSXBase.HTMLAttributes<HTMLTcOpenPositionsElement>;
             "tc-svg-icon-card": LocalJSX.TcSvgIconCard & JSXBase.HTMLAttributes<HTMLTcSvgIconCardElement>;

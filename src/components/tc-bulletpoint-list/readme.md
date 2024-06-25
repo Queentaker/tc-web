@@ -5,10 +5,11 @@
 
 ## Properties
 
-| Property       | Attribute      | Description | Type     | Default     |
-| -------------- | -------------- | ----------- | -------- | ----------- |
-| `bulletpoints` | `bulletpoints` |             | `"[]"`   | `undefined` |
-| `header`       | `title`        |             | `string` | `undefined` |
+| Property          | Attribute          | Description | Type     | Default                |
+| ----------------- | ------------------ | ----------- | -------- | ---------------------- |
+| `backgroundColor` | `background-color` |             | `string` | `"rgb(255, 255, 255)"` |
+| `bulletpoints`    | `bulletpoints`     |             | `"[]"`   | `undefined`            |
+| `header`          | `title`            |             | `string` | `undefined`            |
 
 
 ----------------------------------------------
